@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Tracker</string>
+    
+    <!-- Navigation labels -->
+    <string name="expenses">Expenses</string>
+    <string name="statistics">Statistics</string>
+    <string name="budget">Budget</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="edit_expense">Edit Expense</string>
+    
+    <!-- Budget Fragment -->
+    <string name="budget_title">Set Monthly Budget</string>
+    <string name="budget_amount_hint">Budget Amount</string>
+    <string name="save_budget">Save Budget</string>
+    <string name="current_month_budget">Current Month Budget</string>
+    <string name="budget_label">Budget:</string>
+    <string name="spent_label">Spent:</string>
+    <string name="remaining_label">Remaining:</string>
+    <string name="budget_usage">Budget Usage</string>
+    <string name="error_empty_budget">Please enter a budget amount</string>
+    <string name="error_negative_budget">Budget must be greater than zero</string>
+    <string name="error_invalid_number">Please enter a valid number</string>
+    
+    <!-- Months for Statistics -->
+    <string-array name="months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+</resources>

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -16,7 +17,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import com.example.expensetracker.R;
+import com.example.expensetracker.data.entity.Expense;
+import com.example.expensetracker.data.model.Category;
 import com.example.expensetracker.viewmodel.ExpenseViewModel;
+
+import java.util.Date;
 
 /**
  * Fragment for adding or editing an expense.
@@ -51,14 +56,30 @@ public class AddEditExpenseFragment extends Fragment {
         editTextDescription = view.findViewById(R.id.edit_text_description);
         spinnerCategory = view.findViewById(R.id.spinner_category);
         
+        // Set up category spinner
+        ArrayAdapter<String> categoryAdapter = new ArrayAdapter<>(
+                requireContext(),
+                android.R.layout.simple_spinner_item,
+                Category.getAllDisplayNames());
+        categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerCategory.setAdapter(categoryAdapter);
+        
         // If editing an existing expense, load its data
         if (expenseId != -1L) {
             // Load expense data from ViewModel
             expenseViewModel.getExpenseById(expenseId).observe(getViewLifecycleOwner(), expense -> {
                 if (expense != null) {
                     editTextAmount.setText(String.valueOf(expense.getAmount()));
-                    editTextDescription.setText(expense.getDescription());
+                    editTextDescription.setText(expense.getNotes());
+                    
                     // Set spinner selection based on category
+                    String categoryName = expense.getCategory();
+                    for (int i = 0; i < categoryAdapter.getCount(); i++) {
+                        if (categoryAdapter.getItem(i).equals(categoryName)) {
+                            spinnerCategory.setSelection(i);
+                            break;
+                        }
+                    }
                 }
             });
         }
@@ -73,13 +94,43 @@ public class AddEditExpenseFragment extends Fragment {
     }
     
     private void saveExpense() {
-        // This is a placeholder implementation
-        // In a real app, you would validate inputs and save the expense
+        // Validate inputs
+        String amountStr = editTextAmount.getText().toString().trim();
+        String description = editTextDescription.getText().toString().trim();
+        String categoryStr = spinnerCategory.getSelectedItem().toString();
         
-        // Show a toast message
-        Toast.makeText(requireContext(), "Expense saved", Toast.LENGTH_SHORT).show();
+        if (amountStr.isEmpty()) {
+            editTextAmount.setError("Please enter an amount");
+            return;
+        }
         
-        // Navigate back
-        Navigation.findNavController(requireView()).navigateUp();
+        try {
+            double amount = Double.parseDouble(amountStr);
+            
+            // Create or update expense
+            if (expenseId == -1L) {
+                // Create new expense
+                Expense newExpense = new Expense(amount, categoryStr, new Date(), description);
+                expenseViewModel.insert(newExpense);
+                Toast.makeText(requireContext(), "Expense added", Toast.LENGTH_SHORT).show();
+            } else {
+                // Update existing expense
+                expenseViewModel.getExpenseById(expenseId).observe(getViewLifecycleOwner(), expense -> {
+                    if (expense != null) {
+                        expense.setAmount(amount);
+                        expense.setCategory(categoryStr);
+                        expense.setNotes(description);
+                        expenseViewModel.update(expense);
+                    }
+                });
+                Toast.makeText(requireContext(), "Expense updated", Toast.LENGTH_SHORT).show();
+            }
+            
+            // Navigate back
+            Navigation.findNavController(requireView()).navigateUp();
+            
+        } catch (NumberFormatException e) {
+            editTextAmount.setError("Please enter a valid amount");
+        }
     }
 }

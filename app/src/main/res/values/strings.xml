@@ -48,6 +48,11 @@
     <string name="year">Year</string>
     <string name="total_expenses">Total Expenses</string>
     <string name="no_data_for_selected_period">No data for selected period</string>
+    
+    <!-- Categories -->
+    <string name="categories">Categories</string>
+    <string name="manage_categories">Manage Categories</string>
+    <string name="available_categories">Available Categories</string>
     <string name="category_distribution">Category Distribution</string>
     <string name="category_comparison">Category Comparison</string>
 </resources>

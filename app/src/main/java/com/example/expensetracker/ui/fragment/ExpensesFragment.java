@@ -101,8 +101,14 @@ public class ExpensesFragment extends Fragment implements ExpenseAdapter.OnItemC
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.action_export_csv) {
+        int id = item.getItemId();
+        if (id == R.id.action_export_csv) {
             exportToCsv();
+            return true;
+        } else if (id == R.id.action_categories) {
+            // Navigate to categories fragment
+            Navigation.findNavController(requireView())
+                    .navigate(R.id.action_navigation_expenses_to_categories);
             return true;
         }
         return super.onOptionsItemSelected(item);

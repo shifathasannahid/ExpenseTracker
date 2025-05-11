@@ -142,7 +142,7 @@ public class StatisticsFragment extends Fragment {
                 // Show charts
                 pieChart.setVisibility(View.VISIBLE);
                 barChart.setVisibility(View.VISIBLE);
-                view.findViewById(R.id.text_view_no_data).setVisibility(View.GONE);
+                requireView().findViewById(R.id.text_view_no_data).setVisibility(View.GONE);
 
                 // Update charts
                 ChartHelper.setupPieChart(pieChart, categorySums, requireContext());
@@ -151,7 +151,7 @@ public class StatisticsFragment extends Fragment {
                 // Show no data message
                 pieChart.setVisibility(View.GONE);
                 barChart.setVisibility(View.GONE);
-                view.findViewById(R.id.text_view_no_data).setVisibility(View.VISIBLE);
+                requireView().findViewById(R.id.text_view_no_data).setVisibility(View.VISIBLE);
             }
         });
     }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/primary_light"/>
+    <foreground>
+        <vector
+            android:width="108dp"
+            android:height="108dp"
+            android:viewportWidth="108"
+            android:viewportHeight="108">
+            <path
+                android:fillColor="@color/primary"
+                android:pathData="M36,40L72,40A4,4 0,0 1,76 44L76,64A4,4 0,0 1,72 68L36,68A4,4 0,0 1,32 64L32,44A4,4 0,0 1,36 40z"/>
+            <path
+                android:fillColor="@color/primary_light"
+                android:pathData="M40,48L68,48A2,2 0,0 1,70 50L70,50A2,2 0,0 1,68 52L40,52A2,2 0,0 1,38 50L38,50A2,2 0,0 1,40 48z"/>
+            <path
+                android:fillColor="@color/primary_light"
+                android:pathData="M40,56L68,56A2,2 0,0 1,70 58L70,58A2,2 0,0 1,68 60L40,60A2,2 0,0 1,38 58L38,58A2,2 0,0 1,40 56z"/>
+        </vector>
+    </foreground>
+</adaptive-icon>

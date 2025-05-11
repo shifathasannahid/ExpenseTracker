@@ -9,6 +9,10 @@
     <string name="add_expense">Add Expense</string>
     <string name="edit_expense">Edit Expense</string>
     
+    <!-- Empty state messages -->
+    <string name="no_expenses">No expenses yet</string>
+    <string name="add_expense_hint">Tap the + button to add your first expense</string>
+    
     <!-- Budget Fragment -->
     <string name="budget_title">Set Monthly Budget</string>
     <string name="budget_amount_hint">Budget Amount</string>

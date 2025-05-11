@@ -41,4 +41,13 @@
         <item>November</item>
         <item>December</item>
     </string-array>
+    
+    <!-- Statistics Fragment -->
+    <string name="select_period">Select Period</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="total_expenses">Total Expenses</string>
+    <string name="no_data_for_selected_period">No data for selected period</string>
+    <string name="category_distribution">Category Distribution</string>
+    <string name="category_comparison">Category Comparison</string>
 </resources>

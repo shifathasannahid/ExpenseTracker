@@ -45,6 +45,22 @@ dependencies {
     // MPAndroidChart for statistics visualization
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     
+    // Kotlin stdlib - explicitly define version to resolve conflicts
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+    
+    // Exclude conflicting Kotlin dependencies
+    configurations.all {
+        resolutionStrategy {
+            // Force Kotlin stdlib version
+            force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+            force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20'
+            force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20'
+        }
+        // Exclude older versions
+        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk7'
+        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk8'
+    }
+    
     // Testing
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

@@ -43,25 +43,24 @@ public class AddEditExpenseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // Since we don't have the actual layout file yet, we'll use a simple layout from an existing fragment
-        // In a real app, you would create the proper fragment_add_edit_expense.xml layout
-        View view = inflater.inflate(R.layout.fragment_expenses, container, false);
+        // Inflate the correct layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_add_edit_expense, container, false);
         
-        // This is a temporary solution - in a real app, you would find the proper views from your layout
-        // editTextAmount = view.findViewById(R.id.edit_text_amount);
-        // editTextDescription = view.findViewById(R.id.edit_text_description);
-        // spinnerCategory = view.findViewById(R.id.spinner_category);
+        // Initialize views from the layout
+        editTextAmount = view.findViewById(R.id.edit_text_amount);
+        editTextDescription = view.findViewById(R.id.edit_text_description);
+        spinnerCategory = view.findViewById(R.id.spinner_category);
         
         // If editing an existing expense, load its data
         if (expenseId != -1L) {
             // Load expense data from ViewModel
-            // expenseViewModel.getExpenseById(expenseId).observe(getViewLifecycleOwner(), expense -> {
-            //     if (expense != null) {
-            //         editTextAmount.setText(String.valueOf(expense.getAmount()));
-            //         editTextDescription.setText(expense.getDescription());
-            //         // Set spinner selection based on category
-            //     }
-            // });
+            expenseViewModel.getExpenseById(expenseId).observe(getViewLifecycleOwner(), expense -> {
+                if (expense != null) {
+                    editTextAmount.setText(String.valueOf(expense.getAmount()));
+                    editTextDescription.setText(expense.getDescription());
+                    // Set spinner selection based on category
+                }
+            });
         }
         
         // Set up save button

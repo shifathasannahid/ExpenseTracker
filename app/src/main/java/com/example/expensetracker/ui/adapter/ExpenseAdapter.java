@@ -47,7 +47,7 @@ public class ExpenseAdapter extends ListAdapter<Expense, ExpenseAdapter.ExpenseV
         this.context = context;
         this.listener = listener;
         this.dateFormat = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault());
-        this.currencyFormat = NumberFormat.getCurrencyInstance();
+        this.currencyFormat = NumberFormat.getCurrencyInstance(new Locale("bn", "BD"));
     }
     
     /**

@@ -20,6 +20,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.text.NumberFormat;
+import java.util.Locale;
 
 /**
  * Fragment for setting and tracking monthly budget.
@@ -35,7 +36,7 @@ public class BudgetFragment extends Fragment {
     private TextView textViewCurrentSpending;
     private TextView textViewRemaining;
     private LinearProgressIndicator progressIndicator;
-    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
+    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("bn", "BD"));
 
     @Nullable
     @Override

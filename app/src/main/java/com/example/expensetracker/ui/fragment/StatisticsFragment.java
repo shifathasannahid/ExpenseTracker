@@ -25,6 +25,7 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Fragment for displaying expense statistics using charts.
@@ -38,7 +39,7 @@ public class StatisticsFragment extends Fragment {
     private TextView textViewTotalExpenses;
     private Spinner spinnerMonth;
     private Spinner spinnerYear;
-    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
+    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("bn", "BD"));
 
     @Nullable
     @Override

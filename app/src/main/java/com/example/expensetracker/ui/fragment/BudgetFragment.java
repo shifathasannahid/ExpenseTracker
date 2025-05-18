@@ -112,7 +112,8 @@ public class BudgetFragment extends Fragment {
         
         Double expenseSum = expenseViewModel.getCurrentMonthExpenseSum().getValue();
         double spent = expenseSum != null ? expenseSum : 0.0;
-        double remaining = budget - spent;
+        // Fix for remainder balance calculation
+        double remaining = Math.max(0, budget - spent);
         
         // Update remaining text
         textViewRemaining.setText(currencyFormat.format(remaining));
@@ -125,6 +126,8 @@ public class BudgetFragment extends Fragment {
         if (progress >= 100) {
             progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_exceeded, null));
             textViewRemaining.setTextColor(getResources().getColor(R.color.budget_exceeded, null));
+            // Show actual remaining amount (negative) when budget is exceeded
+            textViewRemaining.setText(currencyFormat.format(budget - spent));
         } else if (progress >= 80) {
             progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_warning, null));
             textViewRemaining.setTextColor(getResources().getColor(R.color.budget_warning, null));

@@ -1,0 +1,1368 @@
+--------- beginning of main
+05-11 07:14:16.213  2838  3055 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:14:27.194   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:14:27.205   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:14:27.205  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {ca8333b9-792b-4f07-beb2-bb6d3d7cfede}
+05-11 07:14:27.211  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:14:27.238  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:14:27.243   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:14:27.252  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:14:33.857   894  1088 D EGL_emulation: app_time_stats: avg=33770.16ms min=33770.16ms max=33770.16ms count=1
+05-11 07:14:42.838   894   894 D ZenModeController: Added callback class com.android.systemui.qs.tiles.DndTile$3
+05-11 07:14:42.845   894   894 D ZenModeController: Removed callback class com.android.systemui.qs.tiles.DndTile$3
+05-11 07:14:42.845   894  1039 I QuickAccessWalletTile: QAW service is unavailable, recreating the wallet client.
+05-11 07:14:42.853   894  1039 D ControlsListingControllerImpl: Subscribing callback, service count: 0
+05-11 07:14:42.857   894  1039 D ControlsListingControllerImpl: Unsubscribing callback
+05-11 07:14:45.950   605  2953 D WifiNl80211Manager: Scan result ready event
+05-11 07:14:45.950   605  2953 D WifiNative: Scan result ready event
+05-11 07:14:45.959   605   771 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-11 07:14:55.253   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:14:55.263   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:14:55.270  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:14:55.274  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {9f8f81da-f223-4199-bfde-f7b8fbc95f20}
+05-11 07:14:55.306  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:14:55.311   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:14:55.322  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+--------- beginning of system
+05-11 07:14:58.839   605  1230 I ActivityManager: Force stopping com.example.expensetracker appid=10211 user=0: from pid 6263
+05-11 07:14:58.881   605  1230 I ActivityManager: Killing 5131:com.google.android.apps.safetyhub/u0a141 (adj 985): empty #17
+05-11 07:14:58.900   605  1230 I AppsFilter: interaction: PackageSetting{c897856 com.example.myapplication/10209} -> PackageSetting{2063685 com.example.expensetracker/10211} BLOCKED
+05-11 07:14:58.901   605  1230 I AppsFilter: interaction: PackageSetting{d0e2dc4 com.android.microdroid.empty_payload/10204} -> PackageSetting{2063685 com.example.expensetracker/10211} BLOCKED
+05-11 07:14:58.938  3231  3231 D CarrierSvcBindHelper: onHandleForceStop: [com.example.expensetracker]
+05-11 07:14:58.963  3231  3231 D CarrierSvcBindHelper: No carrier app for: 0
+05-11 07:14:59.065  4034  4105 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+05-11 07:14:59.075  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.113  6269  6269 E IPCThreadState: Binder transaction failure. id: 565615, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.123  6269  6269 E IPCThreadState: Binder transaction failure. id: 565620, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.094  6269  6269 W service : type=1400 audit(0.0:511): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_authsecret_default:s0 tclass=binder permissive=0
+05-11 07:14:59.168  6269  6269 E IPCThreadState: Binder transaction failure. id: 565636, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.110  6269  6269 W service : type=1400 audit(0.0:512): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_face_default:s0 tclass=binder permissive=0
+05-11 07:14:59.150  6269  6269 W service : type=1400 audit(0.0:513): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_fingerprint_default:s0 tclass=binder permissive=0
+05-11 07:14:59.166  6269  6269 W service : type=1400 audit(0.0:514): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_bluetooth_default:s0 tclass=binder permissive=0
+05-11 07:14:59.196  6269  6269 E IPCThreadState: Binder transaction failure. id: 565644, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.210  6269  6269 E IPCThreadState: Binder transaction failure. id: 565650, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.194  6269  6269 W service : type=1400 audit(0.0:515): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_audio_default:s0 tclass=binder permissive=0
+05-11 07:14:59.216  6269  6269 E IPCThreadState: Binder transaction failure. id: 565656, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.221  6269  6269 E IPCThreadState: Binder transaction failure. id: 565660, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.214  6269  6269 W service : type=1400 audit(0.0:516): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_camera_default:s0 tclass=binder permissive=0
+05-11 07:14:59.214  6269  6269 W service : type=1400 audit(0.0:517): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_camera_default:s0 tclass=binder permissive=0
+05-11 07:14:59.236  6269  6269 E IPCThreadState: Binder transaction failure. id: 565669, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.240  6269  6269 E IPCThreadState: Binder transaction failure. id: 565679, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.241  6269  6269 E IPCThreadState: Binder transaction failure. id: 565683, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.241  6269  6269 E IPCThreadState: Binder transaction failure. id: 565687, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.242  6269  6269 E IPCThreadState: Binder transaction failure. id: 565691, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.243  6269  6269 E IPCThreadState: Binder transaction failure. id: 565695, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.258  6269  6269 E IPCThreadState: Binder transaction failure. id: 565720, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.258  6269  6269 E IPCThreadState: Binder transaction failure. id: 565724, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.259  6269  6269 E IPCThreadState: Binder transaction failure. id: 565728, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.259  6269  6269 E IPCThreadState: Binder transaction failure. id: 565732, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.260  6269  6269 E IPCThreadState: Binder transaction failure. id: 565736, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.261  6269  6269 E IPCThreadState: Binder transaction failure. id: 565740, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.261  6269  6269 E IPCThreadState: Binder transaction failure. id: 565744, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.262  6269  6269 E IPCThreadState: Binder transaction failure. id: 565748, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.263  6269  6269 E IPCThreadState: Binder transaction failure. id: 565752, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.268  6269  6269 E IPCThreadState: Binder transaction failure. id: 565757, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.268  6269  6269 E IPCThreadState: Binder transaction failure. id: 565761, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.269  6269  6269 E IPCThreadState: Binder transaction failure. id: 565765, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.307  6269  6269 E IPCThreadState: Binder transaction failure. id: 565782, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.309  6269  6269 E IPCThreadState: Binder transaction failure. id: 565786, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.309  6269  6269 E IPCThreadState: Binder transaction failure. id: 565790, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.310  6269  6269 E IPCThreadState: Binder transaction failure. id: 565794, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.310  6269  6269 E IPCThreadState: Binder transaction failure. id: 565798, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.311  6269  6269 E IPCThreadState: Binder transaction failure. id: 565802, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.338  6269  6269 E IPCThreadState: Binder transaction failure. id: 565850, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.339  6269  6269 E IPCThreadState: Binder transaction failure. id: 565854, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.340  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.358  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.364  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.375  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.401  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.405  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.409  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.424  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.426  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.460  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.493   605   639 D DisplayManagerService: Drop pending events for gone uid 10141
+05-11 07:14:59.506  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.577   605   655 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10141/pid_5131
+05-11 07:14:59.580   373   373 I Zygote  : Process 5131 exited due to signal 9 (Killed)
+05-11 07:14:59.596  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.604  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.648  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.672  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.701  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.718  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.760  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.771  6269  6269 E Parcel  : Reading a NULL string not supported here.
+05-11 07:14:59.875  6269  6269 E IPCThreadState: Binder transaction failure. id: 566985, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:14:59.948  5360  5360 I studio.deploy: Received request 'overlayinstall'
+05-11 07:15:00.000  5969  5969 E studio.deploy: ERROR: Could not remove dir '/data/data/com.example.expensetracker/code_cache/.ll/': No such file or directory
+05-11 07:15:00.102  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:15:00.108  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:15:00.108  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:15:00.108  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:15:00.112  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:15:00.124  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:15:00.129  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:15:00.130  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:15:00.130  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:15:00.130  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:15:00.131  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:15:00.132  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:15:00.144  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-11 07:15:00.153  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:15:00.192  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:15:00.216  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:15:00.217  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:15:00.218  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:15:00.218  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:15:00.307   894   894 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-11 07:15:00.383   894  1088 D EGL_emulation: app_time_stats: avg=26522.48ms min=26522.48ms max=26522.48ms count=1
+05-11 07:15:00.452  1322  1886 D EGL_emulation: app_time_stats: avg=60313.79ms min=60313.79ms max=60313.79ms count=1
+05-11 07:15:00.466   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=12 frameNumber=53 -> producedId=12 frameNumber=25
+05-11 07:15:00.479   605  2953 I ActivityManager: Force stopping com.example.expensetracker appid=10211 user=0: from pid 6278
+05-11 07:15:00.486   605  2953 I AppsFilter: interaction: PackageSetting{c897856 com.example.myapplication/10209} -> PackageSetting{2063685 com.example.expensetracker/10211} BLOCKED
+05-11 07:15:00.487   605  2953 I AppsFilter: interaction: PackageSetting{d0e2dc4 com.android.microdroid.empty_payload/10204} -> PackageSetting{2063685 com.example.expensetracker/10211} BLOCKED
+05-11 07:15:00.506  3231  3231 D CarrierSvcBindHelper: onHandleForceStop: [com.example.expensetracker]
+05-11 07:15:00.506  3231  3231 D CarrierSvcBindHelper: No carrier app for: 0
+05-11 07:15:00.562  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.574  6281  6281 E IPCThreadState: Binder transaction failure. id: 567184, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.575  6281  6281 E IPCThreadState: Binder transaction failure. id: 567188, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.575  6281  6281 E IPCThreadState: Binder transaction failure. id: 567192, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.576  6281  6281 E IPCThreadState: Binder transaction failure. id: 567196, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.576  6281  6281 E IPCThreadState: Binder transaction failure. id: 567200, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.570  6281  6281 W service : type=1400 audit(0.0:545): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_authsecret_default:s0 tclass=binder permissive=0
+05-11 07:15:00.570  6281  6281 W service : type=1400 audit(0.0:546): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_face_default:s0 tclass=binder permissive=0
+05-11 07:15:00.595  6281  6281 E IPCThreadState: Binder transaction failure. id: 567204, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.595  6281  6281 E IPCThreadState: Binder transaction failure. id: 567209, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.597  6281  6281 E IPCThreadState: Binder transaction failure. id: 567218, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.599  6281  6281 E IPCThreadState: Binder transaction failure. id: 567227, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.599  6281  6281 E IPCThreadState: Binder transaction failure. id: 567232, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.599  6281  6281 E IPCThreadState: Binder transaction failure. id: 567236, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.600  6281  6281 E IPCThreadState: Binder transaction failure. id: 567240, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.600  6281  6281 E IPCThreadState: Binder transaction failure. id: 567244, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.603  6281  6281 E IPCThreadState: Binder transaction failure. id: 567268, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.603  6281  6281 E IPCThreadState: Binder transaction failure. id: 567272, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.604  6281  6281 E IPCThreadState: Binder transaction failure. id: 567276, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.604  6281  6281 E IPCThreadState: Binder transaction failure. id: 567280, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.604  6281  6281 E IPCThreadState: Binder transaction failure. id: 567284, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.570  6281  6281 W service : type=1400 audit(0.0:547): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_fingerprint_default:s0 tclass=binder permissive=0
+05-11 07:15:00.604  6281  6281 E IPCThreadState: Binder transaction failure. id: 567288, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.605  6281  6281 E IPCThreadState: Binder transaction failure. id: 567292, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.605  6281  6281 E IPCThreadState: Binder transaction failure. id: 567296, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.605  6281  6281 E IPCThreadState: Binder transaction failure. id: 567300, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.605  6281  6281 E IPCThreadState: Binder transaction failure. id: 567304, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.606  6281  6281 E IPCThreadState: Binder transaction failure. id: 567308, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.606  6281  6281 E IPCThreadState: Binder transaction failure. id: 567312, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.570  6281  6281 W service : type=1400 audit(0.0:548): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_bluetooth_default:s0 tclass=binder permissive=0
+05-11 07:15:00.570  6281  6281 W service : type=1400 audit(0.0:549): avc:  denied  { call } for  scontext=u:r:shell:s0 tcontext=u:r:hal_audio_default:s0 tclass=binder permissive=0
+05-11 07:15:00.644  6281  6281 E IPCThreadState: Binder transaction failure. id: 567329, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.644  6281  6281 E IPCThreadState: Binder transaction failure. id: 567333, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.644  6281  6281 E IPCThreadState: Binder transaction failure. id: 567337, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.645  6281  6281 E IPCThreadState: Binder transaction failure. id: 567341, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.646  6281  6281 E IPCThreadState: Binder transaction failure. id: 567345, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.646  6281  6281 E IPCThreadState: Binder transaction failure. id: 567349, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.661  6281  6281 E IPCThreadState: Binder transaction failure. id: 567396, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.661  6281  6281 E IPCThreadState: Binder transaction failure. id: 567400, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.662  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.670  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.671  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.674  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.681  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.683  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.684  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.686  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.686  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.703  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.709  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.740  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.743  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.763  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.780  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.797  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.805  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.834  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.838  6281  6281 E Parcel  : Reading a NULL string not supported here.
+05-11 07:15:00.859  6281  6281 E IPCThreadState: Binder transaction failure. id: 568498, BR_*: 29201, error: -1 (Operation not permitted)
+05-11 07:15:00.920   605  2953 W ActivityTaskManager: callingPackage for (uid=2000, pid=6285) has no WPC
+05-11 07:15:00.924   605  2953 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE
+05-11 07:15:00.924   605  2953 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_FULLSCREEN_OVERRIDE
+05-11 07:15:00.924   605  2953 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE
+05-11 07:15:00.925   605  2953 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@ff575b00 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+05-11 07:15:00.929   605  2953 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_RESIZEABLE_ACTIVITY_OVERRIDES
+05-11 07:15:00.930   605  2953 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE
+05-11 07:15:00.943   605  2953 D CompatChangeReporter: Compat change id reported: 205907456; UID 10211; state: ENABLED
+05-11 07:15:00.954   605  2953 D CompatChangeReporter: Compat change id reported: 194833441; UID 10211; state: ENABLED
+05-11 07:15:00.954   605  2953 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.expensetracker/.ui.MainActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+05-11 07:15:00.956   894   961 V WindowManagerShell: Transition requested (#32): android.os.BinderProxy@c7f4344 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=33 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.expensetracker/.ui.MainActivity } baseActivity=ComponentInfo{com.example.expensetracker/com.example.expensetracker.ui.MainActivity} topActivity=ComponentInfo{com.example.expensetracker/com.example.expensetracker.ui.MainActivity} origActivity=null realActivity=ComponentInfo{com.example.expensetracker/com.example.expensetracker.ui.MainActivity} numActivities=1 lastActiveTime=4508730 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@3468c2d} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 121 - 0, 0) topActivityInfo=ActivityInfo{b8d9562 com.example.expensetracker.ui.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= falseisLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=1080 topActivityLetterboxHeight=2400 isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatControlState=hidden freeformCameraCompatMode=inactive}}}, pipTask = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 32 }
+05-11 07:15:00.960   497   497 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:00.988  1322  1322 W SplitSelectStateCtor: Missing session instanceIds
+05-11 07:15:00.988  1322  1322 D StatsLog: LAUNCHER_SPLIT_SELECTION_EXIT_INTERRUPTED
+05-11 07:15:00.998   605  1230 I AppsFilter: interaction: PackageSetting{c897856 com.example.myapplication/10209} -> PackageSetting{79dacf com.example.expensetracker/10211} BLOCKED
+05-11 07:15:00.998   605  1230 I AppsFilter: interaction: PackageSetting{d0e2dc4 com.android.microdroid.empty_payload/10204} -> PackageSetting{79dacf com.example.expensetracker/10211} BLOCKED
+05-11 07:15:01.000   894   961 D WindowManagerShell: setLauncherKeepClearAreaHeight: visible=false, height=527
+05-11 07:15:01.003   445   445 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+05-11 07:15:01.004   605   641 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@ff575b00 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+05-11 07:15:01.005  1322  1322 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=33, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.expensetracker/.ui.MainActivity }
+05-11 07:15:01.017   605  1723 D CoreBackPreview: Window{eee03a u0 Splash Screen com.example.expensetracker}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@8e548e1, mPriority=0, mIsAnimationCallback=false}
+05-11 07:15:01.116   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=12 frameNumber=53 -> producedId=12 frameNumber=26
+05-11 07:15:01.166   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=12 frameNumber=53 -> producedId=12 frameNumber=27
+05-11 07:15:01.187   894  1636 V WindowManagerShell: onTransitionReady(transaction=2598455215566)
+05-11 07:15:01.188   605   638 V WindowManager: Sent Transition (#32) createdAt=05-11 07:15:00.931 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=33 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.expensetracker/.ui.MainActivity } baseActivity=ComponentInfo{com.example.expensetracker/com.example.expensetracker.ui.MainActivity} topActivity=ComponentInfo{com.example.expensetracker/com.example.expensetracker.ui.MainActivity} origActivity=null realActivity=ComponentInfo{com.example.expensetracker/com.example.expensetracker.ui.MainActivity} numActivities=1 lastActiveTime=4508730 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{bed15bf Task{96cad30 #33 type=standard A=10211:com.example.expensetracker}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 121 - 0, 0) topActivityInfo=ActivityInfo{14ca48c com.example.expensetracker.ui.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= falseisLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=1080 topActivityLetterboxHeight=2400 isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatControlState=hidden freeformCameraCompatMode=inactive}}}, pipTask = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 32 }
+05-11 07:15:01.188   605   638 V WindowManager:     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+05-11 07:15:01.188   605   638 V WindowManager:     info={id=32 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+05-11 07:15:01.188   605   638 V WindowManager:         {WCT{RemoteToken{bed15bf Task{96cad30 #33 type=standard A=10211:com.example.expensetracker}}} m=OPEN f=NONE leash=Surface(name=Task=33)/@0x9437663 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},
+05-11 07:15:01.188   605   638 V WindowManager:         {WCT{RemoteToken{b658bb4 Task{bc05cee #1 type=home}}} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x60ec3e4 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}
+05-11 07:15:01.188   605   638 V WindowManager:     ]}
+05-11 07:15:01.191   894   961 V WindowManagerShell: onTransitionReady (#32) android.os.BinderProxy@c7f4344: {id=32 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@a9b4947} m=OPEN f=NONE leash=Surface(name=Task=33)/@0x13164c8 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@85c0574} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x96d0961 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+05-11 07:15:01.192   894   961 V WindowManagerShell: Playing animation for (#32) android.os.BinderProxy@c7f4344@0
+05-11 07:15:01.192   894   961 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultMixedHandler@5e9ebdf
+05-11 07:15:01.193   894   961 V WindowManagerShell:  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@7f1902c
+05-11 07:15:01.193   894   961 V WindowManagerShell:  try handler com.android.wm.shell.pip.PipTransition@9cffaf5
+05-11 07:15:01.193   894   961 V WindowManagerShell:  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@a82b08a
+05-11 07:15:01.193   894   961 V WindowManagerShell:  try handler com.android.wm.shell.recents.RecentsTransitionHandler@2b66fb
+05-11 07:15:01.194   894   961 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+05-11 07:15:01.194   894   961 V WindowManagerShell:  try handler com.android.wm.shell.splitscreen.StageCoordinator@cfd8318
+05-11 07:15:01.194   894   961 V WindowManagerShell:  try handler com.android.wm.shell.transition.RemoteTransitionHandler@2725171
+05-11 07:15:01.194   894   961 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=32 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@a9b4947} m=OPEN f=NONE leash=Surface(name=Task=33)/@0x13164c8 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@85c0574} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x96d0961 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+05-11 07:15:01.245   605  1230 W UserManagerService: Requested status bar icon for non-badged user 0
+05-11 07:15:01.254   894   961 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=undefined independent=true modes=[OPEN,TO_FRONT] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@9be135e, appThread = android.app.IApplicationThread$Stub$Proxy@889133f, debugName = OverlaySwipeBack }}
+05-11 07:15:01.254   894   961 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@7f4940c, appThread = android.app.IApplicationThread$Stub$Proxy@586e155, debugName = LauncherToDream }}
+05-11 07:15:01.254   894   961 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@fd4076a, appThread = android.app.IApplicationThread$Stub$Proxy@d85a45b, debugName = QuickstepLaunchHome }}
+05-11 07:15:01.254   894   961 V WindowManagerShell:  Delegate animation for (#32) to null
+05-11 07:15:01.254   894   961 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultTransitionHandler@de34b56
+05-11 07:15:01.254   894   961 V WindowManagerShell: start default transition animation, info = {id=32 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@a9b4947} m=OPEN f=NONE leash=Surface(name=Task=33)/@0x13164c8 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@85c0574} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x96d0961 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+05-11 07:15:01.255   894   961 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@7148399 animAttr=0x13 type=OPEN isEntrance=false
+05-11 07:15:01.257   894   961 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@52ad65e animAttr=0x12 type=OPEN isEntrance=true
+05-11 07:15:01.262   894   961 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@de34b56
+05-11 07:15:01.266   373   373 D Zygote  : Forked child process 6289
+05-11 07:15:01.267   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=12 frameNumber=53 -> producedId=12 frameNumber=28
+05-11 07:15:01.285   605   654 W ActivityManager: Slow operation: 269ms so far, now at startProcess: returned from zygote!
+05-11 07:15:01.285   605   654 W ActivityManager: Slow operation: 271ms so far, now at startProcess: done updating battery stats
+05-11 07:15:01.286   605   654 W ActivityManager: Slow operation: 272ms so far, now at startProcess: building log message
+05-11 07:15:01.286   605   654 I ActivityManager: Start proc 6289:com.example.expensetracker/u0a211 for next-top-activity {com.example.expensetracker/com.example.expensetracker.ui.MainActivity}
+05-11 07:15:01.286   605   654 W ActivityManager: Slow operation: 272ms so far, now at startProcess: starting to update pids map
+05-11 07:15:01.286   605   654 W ActivityManager: Slow operation: 272ms so far, now at startProcess: done updating pids map
+05-11 07:15:01.305   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=12 frameNumber=53 -> producedId=12 frameNumber=29
+05-11 07:15:01.375  6289  6289 I .expensetracker: Late-enabling -Xcheck:jni
+05-11 07:15:01.391   894  1088 D EGL_emulation: app_time_stats: avg=335.24ms min=39.32ms max=902.81ms count=3
+05-11 07:15:01.401   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=12 frameNumber=53 -> producedId=12 frameNumber=30
+05-11 07:15:01.401  1322  1886 D EGL_emulation: app_time_stats: avg=68245.80ms min=10.50ms max=613678.81ms count=9
+05-11 07:15:01.474  1322  1886 D EGL_emulation: app_time_stats: avg=167.29ms min=36.62ms max=662.47ms count=6
+05-11 07:15:01.513   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=12 frameNumber=53 -> producedId=12 frameNumber=31
+05-11 07:15:01.567   894   961 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#32) android.os.BinderProxy@c7f4344@0
+05-11 07:15:01.568   605   638 V WindowManager: Finish Transition (#32): created at 05-11 07:15:00.931 collect-started=0.445ms request-sent=16.265ms started=55.408ms ready=231.629ms sent=244.827ms finished=636.65ms
+05-11 07:15:01.571   894   961 V WindowManagerShell: Track 0 became idle
+05-11 07:15:01.571   894   961 V WindowManagerShell: All active transition animations finished
+05-11 07:15:01.573   605  1230 W UserManagerService: Requested status bar icon for non-badged user 0
+05-11 07:15:01.598   605  1230 W UserManagerService: Requested status bar icon for non-badged user 0
+05-11 07:15:01.616  6289  6289 I .expensetracker: Using CollectorTypeCMC GC.
+05-11 07:15:01.625  6289  6289 W .expensetracker: Unexpected CPU variant for x86: x86_64.
+05-11 07:15:01.625  6289  6289 W .expensetracker: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+05-11 07:15:01.627  1322  1322 D VRI[NexusLauncherActivity]: visibilityChanged oldVisibility=true newVisibility=false
+05-11 07:15:01.628  1322  1322 D NexusLauncherModelDelegate: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=7}
+05-11 07:15:01.665   452   471 I adbd    : jdwp connection from 6289
+05-11 07:15:01.702  6289  6289 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+05-11 07:15:01.779  6289  6289 D nativeloader: Load /data/user/0/com.example.expensetracker/code_cache/startup_agents/1553d31e-agent.so using system ns (caller=<unknown>): ok
+05-11 07:15:01.781  6289  6289 V studio.deploy: Startup agent attached to VM
+05-11 07:15:01.782  6289  6289 V studio.deploy: No existing instrumentation found. Loading instrumentation from instruments-c8049923.jar
+05-11 07:15:01.762  6289  6289 W re-initialized>: type=1400 audit(0.0:579): avc:  granted  { execute } for  path="/data/data/com.example.expensetracker/code_cache/startup_agents/1553d31e-agent.so" dev="dm-46" ino=361984 scontext=u:r:untrusted_app_32:s0:c211,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c211,c256,c512,c768 tclass=file app=com.example.expensetracker
+05-11 07:15:01.817  6289  6289 W .expensetracker: DexFile /data/data/com.example.expensetracker/code_cache/.studio/instruments-c8049923.jar is in boot class path but is not in a known location
+05-11 07:15:01.825  6289  6289 V studio.deploy: Applying transforms with cached classes
+05-11 07:15:02.005  6289  6289 W .expensetracker: Redefining intrinsic method java.lang.Thread java.lang.Thread.currentThread(). This may cause the unexpected use of the original definition of java.lang.Thread java.lang.Thread.currentThread()in methods that have already been compiled.
+05-11 07:15:02.005  6289  6289 W .expensetracker: Redefining intrinsic method boolean java.lang.Thread.interrupted(). This may cause the unexpected use of the original definition of boolean java.lang.Thread.interrupted()in methods that have already been compiled.
+05-11 07:15:02.008  6289  6289 I studio.deploy: Registering DispatchJNI
+05-11 07:15:02.008  6289  6289 I studio.deploy: Found com/android/tools/deploy/interpreter/JNI
+05-11 07:15:02.081  6289  6289 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+05-11 07:15:02.081  6289  6289 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+05-11 07:15:02.090  6289  6289 W ziparchive: Unable to open '/data/app/~~9Rz7dIl-Bpw-zjtZihZ8LQ==/com.example.expensetracker-ouxyI5zOuRXphngGZCISrQ==/base.dm': No such file or directory
+05-11 07:15:02.090  6289  6289 W ziparchive: Unable to open '/data/app/~~9Rz7dIl-Bpw-zjtZihZ8LQ==/com.example.expensetracker-ouxyI5zOuRXphngGZCISrQ==/base.dm': No such file or directory
+05-11 07:15:02.412  6289  6289 D nativeloader: Configuring clns-7 for other apk /data/app/~~9Rz7dIl-Bpw-zjtZihZ8LQ==/com.example.expensetracker-ouxyI5zOuRXphngGZCISrQ==/base.apk. target_sdk_version=33, uses_libraries=, library_path=/data/app/~~9Rz7dIl-Bpw-zjtZihZ8LQ==/com.example.expensetracker-ouxyI5zOuRXphngGZCISrQ==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.expensetracker
+05-11 07:15:02.432  6289  6289 V GraphicsEnvironment: Currently set values for:
+05-11 07:15:02.432  6289  6289 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+05-11 07:15:02.432  6289  6289 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+05-11 07:15:02.432  6289  6289 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+05-11 07:15:02.432  6289  6289 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+05-11 07:15:02.481   605  1230 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ENABLE_FAKE_FOCUS
+05-11 07:15:02.542  6289  6289 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+05-11 07:15:02.632  6289  6289 W .expensetracker: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+05-11 07:15:02.633  6289  6289 W .expensetracker: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+05-11 07:15:02.637  6289  6289 D CompatChangeReporter: Compat change id reported: 210923482; UID 10211; state: ENABLED
+05-11 07:15:02.909  6289  6289 E TransactionExecutor: Failed to execute the transaction: tId:-1440499268 ClientTransaction{
+05-11 07:15:02.909  6289  6289 E TransactionExecutor: tId:-1440499268   transactionItems=[
+05-11 07:15:02.909  6289  6289 E TransactionExecutor: tId:-1440499268     LaunchActivityItem{activityToken=android.os.BinderProxy@1177f5d,intent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.expensetracker/.ui.MainActivity },ident=251857523,info=ActivityInfo{6d6c8c3 com.example.expensetracker.ui.MainActivity},curConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h844dp 420dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 121 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.56 fontWeightAdjustment=0},overrideConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h844dp 420dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 121 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.3 fontWeightAdjustment=0},deviceId=0,referrer=com.android.shell,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,sceneTransitionInfo=null,profilerInfo=null,assistToken=android.os.BinderProxy@92ccfd4,shareableActivityToken=android.os.BinderProxy@15f457d,activityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1080, 2400), taskFragmentBounds=Rect(0, 0 - 1080, 2400)}}
+05-11 07:15:02.909  6289  6289 E TransactionExecutor: tId:-1440499268     ResumeActivityItem{mActivityToken=android.os.BinderProxy@1177f5d,procState=-1,updateProcState=false,isForward=true,shouldSendCompatFakeFocus=false}
+05-11 07:15:02.909  6289  6289 E TransactionExecutor: tId:-1440499268     Target activity: com.example.expensetracker.ui.MainActivity
+05-11 07:15:02.909  6289  6289 E TransactionExecutor: tId:-1440499268   ]
+05-11 07:15:02.909  6289  6289 E TransactionExecutor: tId:-1440499268 }
+05-11 07:15:02.909  6289  6289 D AndroidRuntime: Shutting down VM
+--------- beginning of crash
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: FATAL EXCEPTION: main
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: Process: com.example.expensetracker, PID: 6289
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.example.expensetracker/com.example.expensetracker.ui.MainActivity}: java.lang.IllegalStateException: This Activity already has an action bar supplied by the window decor. Do not request Window.FEATURE_SUPPORT_ACTION_BAR and set windowActionBar to false in your theme to use a Toolbar instead.
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4048)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4235)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:112)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: Caused by: java.lang.IllegalStateException: This Activity already has an action bar supplied by the window decor. Do not request Window.FEATURE_SUPPORT_ACTION_BAR and set windowActionBar to false in your theme to use a Toolbar instead.
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at androidx.appcompat.app.AppCompatDelegateImpl.setSupportActionBar(AppCompatDelegateImpl.java:630)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at androidx.appcompat.app.AppCompatActivity.setSupportActionBar(AppCompatActivity.java:185)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at com.example.expensetracker.ui.MainActivity.onCreate(MainActivity.java:35)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9002)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:8980)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4030)
+05-11 07:15:02.916  6289  6289 E AndroidRuntime: 	... 13 more
+05-11 07:15:02.923   605  6308 I DropBoxManagerService: add tag=data_app_crash isTagEnabled=true flags=0x2
+05-11 07:15:02.924   605  1230 W ActivityTaskManager:   Force finishing activity com.example.expensetracker/.ui.MainActivity
+05-11 07:15:02.926  1322  1322 D VRI[NexusLauncherActivity]: visibilityChanged oldVisibility=false newVisibility=true
+05-11 07:15:02.927   894   961 V WindowManagerShell: Transition requested (#33): android.os.BinderProxy@8c9fa6a TransitionRequestInfo { type = CLOSE, triggerTask = null, pipTask = null, remoteTransition = null, displayChange = null, flags = 16, debugId = 33 }
+05-11 07:15:02.931  6289  6289 I Process : Sending signal. PID: 6289 SIG: 9
+05-11 07:15:02.933   445   445 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+05-11 07:15:02.936  1322  1322 D NexusLauncherModelDelegate: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=6}
+05-11 07:15:03.026   605  2953 I ActivityManager: Process com.example.expensetracker (pid 6289) has died: fg  TOP 
+05-11 07:15:03.036   373   373 I Zygote  : Process 6289 exited due to signal 9 (Killed)
+05-11 07:15:03.036   605   655 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10211/pid_6289
+05-11 07:15:03.037   452   452 I adbd    : Remote process closed the socket (on MSG_PEEK)
+05-11 07:15:03.037   605   639 D DisplayManagerService: Drop pending events for gone uid 10211
+05-11 07:15:03.055  1322  1322 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=22, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity }
+05-11 07:15:03.057  1322  1322 D StatsLog: LAUNCHER_ONRESUME
+05-11 07:15:03.057   894   961 D WindowManagerShell: setLauncherKeepClearAreaHeight: visible=true, height=527
+05-11 07:15:03.062   894  1148 V WindowManagerShell: onTransitionReady(transaction=2598455215587)
+05-11 07:15:03.063   894   961 V WindowManagerShell: onTransitionReady (#33) android.os.BinderProxy@8c9fa6a: {id=33 t=CLOSE f=0x10 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@ee31237} m=TO_FRONT f=SHOW_WALLPAPER|MOVE_TO_TOP leash=Surface(name=Task=1)/@0x481b5b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@3c5b3a4} m=CLOSE f=NONE leash=Surface(name=Task=33)/@0xa6b8ff8 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{e9f0067 token=android.os.Binder@3005c26})/@0x77a0cd1 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+05-11 07:15:03.063   894   961 V WindowManagerShell: Playing animation for (#33) android.os.BinderProxy@8c9fa6a@0
+05-11 07:15:03.063   894   961 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultMixedHandler@5e9ebdf
+05-11 07:15:03.063   894   961 V WindowManagerShell:  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@7f1902c
+05-11 07:15:03.063   894   961 V WindowManagerShell:  try handler com.android.wm.shell.pip.PipTransition@9cffaf5
+05-11 07:15:03.064   894   961 V WindowManagerShell:  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@a82b08a
+05-11 07:15:03.064   894   961 V WindowManagerShell:  try handler com.android.wm.shell.recents.RecentsTransitionHandler@2b66fb
+05-11 07:15:03.064   894   961 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+05-11 07:15:03.064   894   961 V WindowManagerShell:  try handler com.android.wm.shell.splitscreen.StageCoordinator@cfd8318
+05-11 07:15:03.064   894   961 V WindowManagerShell:  try handler com.android.wm.shell.transition.RemoteTransitionHandler@2725171
+05-11 07:15:03.064  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:15:03.064  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:15:03.064  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:15:03.064  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:15:03.064   894   961 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=33 t=CLOSE f=0x10 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@ee31237} m=TO_FRONT f=SHOW_WALLPAPER|MOVE_TO_TOP leash=Surface(name=Task=1)/@0x481b5b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@3c5b3a4} m=CLOSE f=NONE leash=Surface(name=Task=33)/@0xa6b8ff8 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{e9f0067 token=android.os.Binder@3005c26})/@0x77a0cd1 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+05-11 07:15:03.064  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:15:03.064   894   961 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=undefined independent=true modes=[OPEN,TO_FRONT] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@9be135e, appThread = android.app.IApplicationThread$Stub$Proxy@889133f, debugName = OverlaySwipeBack }}
+05-11 07:15:03.064   894   961 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@7f4940c, appThread = android.app.IApplicationThread$Stub$Proxy@586e155, debugName = LauncherToDream }}
+05-11 07:15:03.064   894   961 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@fd4076a, appThread = android.app.IApplicationThread$Stub$Proxy@d85a45b, debugName = QuickstepLaunchHome }}
+05-11 07:15:03.064   894   961 D RemoteTransitionHandler: Found filterPair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@fd4076a, appThread = android.app.IApplicationThread$Stub$Proxy@d85a45b, debugName = QuickstepLaunchHome }}
+05-11 07:15:03.064   894   961 V WindowManagerShell:  Delegate animation for (#33) to RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@fd4076a, appThread = android.app.IApplicationThread$Stub$Proxy@d85a45b, debugName = QuickstepLaunchHome }
+05-11 07:15:03.065  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:15:03.071   605  1671 W AppSearchIcing: icing-search-engine.cc:321: Error: 5, Message: Document (com.google.android.googlequicksearchbox$OneSearchZeroStateGoogleSuggestions/default, zp) not found.
+05-11 07:15:03.072  1322  1330 E FrameEvents: addRelease: Did not find frame.
+05-11 07:15:03.080   605   638 V WindowManager: Sent Transition (#33) createdAt=05-11 07:15:02.924 via request=TransitionRequestInfo { type = CLOSE, triggerTask = null, pipTask = null, remoteTransition = null, displayChange = null, flags = 16, debugId = 33 }
+05-11 07:15:03.081   605   638 V WindowManager:     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+05-11 07:15:03.081   605   638 V WindowManager:     info={id=33 t=CLOSE f=0x10 trk=0 r=[0@Point(0, 0)] c=[
+05-11 07:15:03.081   605   638 V WindowManager:         {WCT{RemoteToken{b658bb4 Task{bc05cee #1 type=home}}} m=TO_FRONT f=SHOW_WALLPAPER|MOVE_TO_TOP leash=Surface(name=Task=1)/@0x60ec3e4 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},
+05-11 07:15:03.081   605   638 V WindowManager:         {WCT{RemoteToken{bed15bf Task{96cad30 #33 type=standard A=10211:com.example.expensetracker}}} m=CLOSE f=NONE leash=Surface(name=Task=33)/@0x9437663 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},
+05-11 07:15:03.081   605   638 V WindowManager:         {null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{e9f0067 token=android.os.Binder@3005c26})/@0x1ee69c1 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}
+05-11 07:15:03.081   605   638 V WindowManager:     ]}
+05-11 07:15:03.085   894   961 V WindowManagerShell:  animated by com.android.wm.shell.transition.RemoteTransitionHandler@2725171
+05-11 07:15:03.086  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:15:03.090   605   625 W UserManagerService: Requested status bar icon for non-badged user 0
+05-11 07:15:03.110  1322  1378 D QuickstepModelDelegate: notifyAppTargetEvent action=1 launchLocation=workspace/0/[-1,-1]/[1,1]
+05-11 07:15:03.123  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:15:03.124  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:15:03.124  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:15:03.124  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:15:03.124  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:15:03.140  1322  1322 D StateManager: createAtomicAnimation - fromState: Background, toState: Normal, partial trace:
+05-11 07:15:03.140  1322  1322 D StateManager: 	at com.android.quickstep.util.StaggeredWorkspaceAnim.prepareToAnimate(go/retraceme 2855a437b73635ce9cad76b9289087e631bbb67fc90008a0da13d343a00e5041:22)
+05-11 07:15:03.140  1322  1322 D StateManager: 	at com.android.quickstep.util.StaggeredWorkspaceAnim.<init>(go/retraceme 2855a437b73635ce9cad76b9289087e631bbb67fc90008a0da13d343a00e5041:4)
+05-11 07:15:03.140  1322  1322 D StateManager: 	at com.android.quickstep.util.StaggeredWorkspaceAnim.<init>(go/retraceme 2855a437b73635ce9cad76b9289087e631bbb67fc90008a0da13d343a00e5041:1)
+05-11 07:15:03.151   894  1088 D EGL_emulation: app_time_stats: avg=573.56ms min=19.11ms max=1669.14ms count=3
+05-11 07:15:03.178   497   497 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:03.199   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=2
+05-11 07:15:03.202  1322  1326 I s.nexuslauncher: Background concurrent mark compact GC freed 4787KB AllocSpace bytes, 60(1584KB) LOS objects, 49% free, 6669KB/13MB, paused 701us,12.447ms total 271.357ms
+05-11 07:15:03.222  1322  1886 D EGL_emulation: app_time_stats: avg=111.72ms min=2.93ms max=1376.63ms count=15
+05-11 07:15:03.236   894  1019 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@90cbf4f
+05-11 07:15:03.237   605   625 D CoreBackPreview: Window{eee03a u0 Splash Screen com.example.expensetracker EXITING}: Setting back callback null
+05-11 07:15:03.237   605  2953 W InputManager-JNI: Input channel object 'eee03a Splash Screen com.example.expensetracker (client)' was disposed without first being removed with the input manager!
+05-11 07:15:03.246  1322  1328 W System  : A resource failed to call release. 
+05-11 07:15:03.247  1322  1328 W System  : A resource failed to call release. 
+05-11 07:15:03.247  1322  1328 W System  : A resource failed to call release. 
+05-11 07:15:03.248   605   742 I ImeTracker: com.google.android.apps.nexuslauncher:3fbc8c0f: onRequestHide at ORIGIN_SERVER reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR fromUser false
+05-11 07:15:03.248  1322  1328 W s.nexuslauncher: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~9Rz7dIl-Bpw-zjtZihZ8LQ==/com.example.expensetracker-ouxyI5zOuRXphngGZCISrQ==/base.apk' with 1 weak references
+05-11 07:15:03.252   605   742 I ImeTracker: com.google.android.apps.nexuslauncher:3fbc8c0f: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-11 07:15:03.261  1322  1328 W System  : A resource failed to call release. 
+05-11 07:15:03.261  1322  1328 W System  : A resource failed to call release. 
+05-11 07:15:03.261  1322  1328 W System  : A resource failed to call release. 
+05-11 07:15:03.262  1322  1328 W System  : A resource failed to call release. 
+05-11 07:15:03.262  1322  1328 W System  : A resource failed to call release. 
+05-11 07:15:03.262  1322  1328 W System  : A resource failed to call release. 
+05-11 07:15:03.267  2198  2198 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3157 
+05-11 07:15:03.277  2198  2198 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 0, locked = false
+05-11 07:15:03.279  2198  2198 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1986 onStartInput(EditorInfo{EditorInfo{packageName=com.google.android.apps.nexuslauncher, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+05-11 07:15:03.280  2198  2198 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 1, locked = false
+05-11 07:15:03.281  2198  2198 I AndroidIME: InputBundleManager.loadActiveInputBundleId():450 loadActiveInputBundleId: und-Latn-x-password, password
+05-11 07:15:03.285   605   984 W PackageConfigPersister: App-specific configuration not found for packageName: com.google.android.apps.nexuslauncher and userId: 0
+05-11 07:15:03.339   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=3
+05-11 07:15:03.367   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=4
+05-11 07:15:03.425   605   641 W ActivityTaskManager: Activity top resumed state loss timeout for ActivityRecord{f030a73 u0 com.example.expensetracker/.ui.MainActivity t33 f} isExiting}
+05-11 07:15:03.484   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=5
+05-11 07:15:03.513   445   920 W VsyncModulator: setTransactionSchedule: Unexpected EarlyEnd
+05-11 07:15:03.525   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=6
+05-11 07:15:03.551   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=7
+05-11 07:15:03.558  3388  3449 W AbstractServiceBroker: calling package is not null : com.google.android.gms for service ids : [41] [CONTEXT service_id=259 ]
+05-11 07:15:03.561  3388  3449 W AbstractServiceBroker: calling package is not null : com.google.android.gms for service ids : [40] [CONTEXT service_id=259 ]
+05-11 07:15:03.599   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=8
+05-11 07:15:03.633   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=9
+05-11 07:15:03.654   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=10
+05-11 07:15:03.699   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=11
+05-11 07:15:03.751   894   961 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#33) android.os.BinderProxy@8c9fa6a@0
+05-11 07:15:03.756   605   638 V WindowManager: Finish Transition (#33): created at 05-11 07:15:02.924 collect-started=0.067ms request-sent=0.112ms started=5.813ms ready=132.815ms sent=136.502ms finished=831.866ms
+05-11 07:15:03.762   894   961 V WindowManagerShell: Track 0 became idle
+05-11 07:15:03.762   894   961 V WindowManagerShell: All active transition animations finished
+05-11 07:15:03.762   605   625 W UserManagerService: Requested status bar icon for non-badged user 0
+05-11 07:15:03.763   605   625 W UserManagerService: Requested status bar icon for non-badged user 0
+05-11 07:15:03.767   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=12
+05-11 07:15:03.783   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=13
+05-11 07:15:03.836  1322  1322 I TopTaskTracker: onTaskRemoved: taskId=33
+05-11 07:15:03.836  1322  1322 I TopTaskTracker: onTaskRemoved: taskId=33
+05-11 07:15:03.849   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=14
+05-11 07:15:03.869   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=15
+05-11 07:15:03.916   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=16
+05-11 07:15:04.956   605  1808 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+05-11 07:15:06.198   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:15:06.254  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {bd97ec70-f0ea-4f0e-8a1b-835e35bdeea1}
+05-11 07:15:06.254   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:15:06.255  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:15:06.291  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:15:06.296   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:15:06.305  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:15:08.882   605   725 D ActivityManager: freezing 4034 com.google.android.apps.messaging
+05-11 07:15:13.863   894  1088 D EGL_emulation: app_time_stats: avg=1764.13ms min=8.45ms max=10462.29ms count=6
+05-11 07:15:15.887  3388  3880 W AbstractServiceBroker: calling package is not null : com.google.android.googlequicksearchbox for service ids : [40] [CONTEXT service_id=259 ]
+05-11 07:15:16.215  2838  2939 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:15:44.491  3388  6229 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 4612273]
+05-11 07:15:44.497  3388  6229 W WakeLock: GCM_HB_ALARM release without a matched acquire!
+05-11 07:15:44.502  3388  3449 W AbstractServiceBroker: calling package is not null : com.google.android.gms for service ids : [218] [CONTEXT service_id=259 ]
+05-11 07:15:44.508  3388  6229 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 5022291]
+05-11 07:15:45.254   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:15:45.264   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:15:45.266  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {1d77a301-24d5-4923-9aa6-dbbdcd18ee71}
+05-11 07:15:45.271  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:15:45.301  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:15:45.331   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:15:45.343  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:15:47.163   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.165   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.165   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.166   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.166   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.167   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.168   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.168   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.176   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.176   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.252   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.259   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.259   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.260  3388  3880 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:15:47.260   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.260  3388  3880 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:15:47.262   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.262   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.262   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.263   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.263   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.264   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:47.322  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:15:47.323  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:15:47.363   605   984 D ActivityManager: sync unfroze 4034 com.google.android.apps.messaging for 7
+05-11 07:15:47.405   605   984 W ProcessStats: Tracking association SourceState{5424050 com.google.android.apps.messaging:rcs/10140 BFgs #3823} whose proc state 4 is better than process ProcessState{59ede77 com.google.android.apps.messaging/10140 pkg=com.google.android.apps.messaging} proc state 13 (2 skipped)
+05-11 07:15:47.435   605   984 W ContentProviderHelper: Slow operation: 103ms so far, now at getContentProviderImpl: after updateOomAdj
+05-11 07:15:47.436   605   984 W ContentProviderHelper: Slow operation: 105ms so far, now at getContentProviderImpl: done!
+05-11 07:15:47.589  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:15:50.139   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.140   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.140   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.141   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.142   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.142   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.142   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.142   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.150   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.150   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.159   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.168   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.171   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.171   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.172   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.175   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.175   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:15:50.182  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:15:50.182  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:15:50.188  3388  3421 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:15:50.188  3388  3421 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:15:50.235  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:16:00.024  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:16:00.025  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:16:00.025  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:16:00.025  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:16:00.025  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:16:00.027  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:16:00.027  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:16:00.028  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:16:00.028  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:16:00.028  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:16:00.028  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:16:00.028  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:16:00.030  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-11 07:16:00.031  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:16:00.042  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:16:00.045  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:16:00.045  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:16:00.045  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:16:00.045  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:16:00.049   894   894 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-11 07:16:00.109   894  1088 D EGL_emulation: app_time_stats: avg=46245.51ms min=46245.51ms max=46245.51ms count=1
+05-11 07:16:00.134  1322  1886 D EGL_emulation: app_time_stats: avg=3560.41ms min=14.30ms max=56230.13ms count=16
+05-11 07:16:00.173   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=17
+05-11 07:16:10.172   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:16:10.177  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {16077048-3df0-469f-a9fa-58ce125547cd}
+05-11 07:16:10.193   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:16:10.194  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:16:10.225  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:16:10.229   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:16:10.241  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:16:15.880  3388  3421 W AbstractServiceBroker: calling package is not null : com.google.android.googlequicksearchbox for service ids : [40] [CONTEXT service_id=259 ]
+05-11 07:16:16.217  2838  2939 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:16:21.280   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:16:21.308  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {ad391446-a685-4218-98b9-ef266eb1bf7b}
+05-11 07:16:21.339  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:16:21.344   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:16:21.404  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:16:21.439   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:16:21.455  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:16:23.235   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.238   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.239   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.242   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.243   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.243   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.244   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.244   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.252   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.252   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.263   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.267   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.267   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.267   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.267   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.268   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.268   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:23.281  3388  3473 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:16:23.282  3388  3473 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:16:23.286  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:16:23.287  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:16:23.340  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:16:23.443  3231  3237 I m.android.phone: Background concurrent mark compact GC freed 3268KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 3337KB/6675KB, paused 732us,4.245ms total 189.308ms
+05-11 07:16:23.443  3231  3237 W m.android.phone: Reducing the number of considered missed Gc histogram windows from 130 to 100
+05-11 07:16:30.164  3388  6319 W SystemServiceRegistry: No service published for: wifirtt
+05-11 07:16:30.962   605  1723 D WifiNl80211Manager: Scan result ready event
+05-11 07:16:30.962   605  1723 D WifiNative: Scan result ready event
+05-11 07:16:30.971   605   771 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-11 07:16:30.982  3388  6319 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+05-11 07:16:31.006  3388  3561 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+05-11 07:16:31.007  3388  3561 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+05-11 07:16:31.012  3388  3545 I ActivityScheduler: nextTriggerTime: 4685247, in 86452ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 80000
+05-11 07:16:32.241   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.242   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.242   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.242   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.242   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.242   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.242   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.242   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.243   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.243   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.245  3388  3879 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:16:32.247  3388  3879 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:16:32.247  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:16:32.247  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:16:32.248   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.248   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.249   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.249   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.249   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.249   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.249   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:16:32.255  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:16:35.605   605   625 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=4603388 mSleepTimeMs=0 mIdleTimeMs=4239434 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[0, 0, 0, 0, 0],mRxTimeMs=0}]}
+05-11 07:16:49.044  5234  5267 I bluetooth: system/gd/hci/le_address_manager.cc:659 OnCommandComplete: Received command complete with op_code LE_SET_RANDOM_ADDRESS(0x2005)
+05-11 07:16:49.044  5234  5267 I bluetooth: system/gd/hci/le_address_manager.cc:680 OnCommandComplete: update random address : xx:xx:xx:xx:d6:c9
+05-11 07:16:49.044  5234  5267 I bluetooth: system/gd/hci/le_address_manager.cc:347 resume_registered_clients: Resuming registered clients
+05-11 07:16:53.759   894  1088 D EGL_emulation: app_time_stats: avg=53649.20ms min=53649.20ms max=53649.20ms count=1
+05-11 07:17:00.055  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:17:00.056  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:17:00.056  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:17:00.056  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:17:00.057  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:17:00.058  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:17:00.059  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:17:00.060  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:17:00.060  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:17:00.060  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:17:00.060  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:17:00.060  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:17:00.063  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-11 07:17:00.064  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:17:00.080  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:17:00.083   894   894 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-11 07:17:00.083  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:17:00.083  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:17:00.084  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:17:00.084  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:17:00.114   894  1088 D EGL_emulation: app_time_stats: avg=6354.86ms min=6354.86ms max=6354.86ms count=1
+05-11 07:17:00.191  1322  1886 D EGL_emulation: app_time_stats: avg=60056.08ms min=60056.08ms max=60056.08ms count=1
+05-11 07:17:00.202   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=18
+05-11 07:17:16.220  2838  2939 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:17:23.721  3388  6319 I .gms.persistent: Explicit concurrent mark compact GC freed 3745KB AllocSpace bytes, 4(148KB) LOS objects, 49% free, 13MB/26MB, paused 1.681ms,33.607ms total 697.217ms
+05-11 07:17:25.954   605  1723 D WifiNl80211Manager: Scan result ready event
+05-11 07:17:25.954   605  1723 D WifiNative: Scan result ready event
+05-11 07:17:25.966   605   771 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-11 07:17:27.481   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:17:27.482  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:17:27.483   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:17:31.127  3388  3449 W AbstractServiceBroker: calling package is not null : com.google.android.gms for service ids : [40] [CONTEXT service_id=259 ]
+05-11 07:17:33.791   894  1088 D EGL_emulation: app_time_stats: avg=33676.82ms min=33676.82ms max=33676.82ms count=1
+05-11 07:17:43.095   605   638 I GnssLocationProvider: WakeLock acquired by handleDownloadPsdsData()
+05-11 07:17:43.101   605  6330 E GnssPsdsDownloader: No Long-Term PSDS servers were specified in the GnssConfiguration
+05-11 07:17:59.606   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.606   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.607   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.608   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.608   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.608   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.608   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.609   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.613   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.614   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.630   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.631   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.632   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.632   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.632   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.633   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.634   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:17:59.646  3388  3473 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:17:59.647  3388  3473 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:17:59.653  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:17:59.654  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:17:59.687  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:18:00.024  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:18:00.024  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:18:00.024  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:18:00.024  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:18:00.025  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:18:00.027  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:18:00.027  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:18:00.028  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:18:00.028  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:18:00.028  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:18:00.028  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:18:00.029  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:18:00.031  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-11 07:18:00.033  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:18:00.037   894   894 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-11 07:18:00.040  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:18:00.043  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:18:00.043  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:18:00.043  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:18:00.043  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:18:00.074   894  1088 D EGL_emulation: app_time_stats: avg=26281.97ms min=26281.97ms max=26281.97ms count=1
+05-11 07:18:00.158  1322  1886 D EGL_emulation: app_time_stats: avg=59966.62ms min=59966.62ms max=59966.62ms count=1
+05-11 07:18:00.166   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=19
+05-11 07:18:00.737   605   621 I system_server: Background concurrent mark compact GC freed 23MB AllocSpace bytes, 20(524KB) LOS objects, 45% free, 28MB/52MB, paused 2.255ms,31.995ms total 1.165s
+05-11 07:18:00.748  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {16077048-3df0-469f-a9fa-58ce125547cd}
+05-11 07:18:00.749  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {1d77a301-24d5-4923-9aa6-dbbdcd18ee71}
+05-11 07:18:00.751  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {bd97ec70-f0ea-4f0e-8a1b-835e35bdeea1}
+05-11 07:18:00.782  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {9f8f81da-f223-4199-bfde-f7b8fbc95f20}
+05-11 07:18:00.784  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {ca8333b9-792b-4f07-beb2-bb6d3d7cfede}
+05-11 07:18:00.784  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {53f1b907-6f7c-43e5-bf49-36256bc4cd4a}
+05-11 07:18:00.785  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {0cabb1cc-d43f-4b0c-9028-a2c0cc5a3135}
+05-11 07:18:00.792  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {256a0351-c862-42d6-ba5e-67831eeed6e7}
+05-11 07:18:00.793  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {a92f0b79-53f1-4baa-847d-05b390a33152}
+05-11 07:18:00.797  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {27da5f9c-4267-45d9-816c-5d7afec77c52}
+05-11 07:18:00.798  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {75c420b9-1e16-4b51-a6b9-32823f1a7f1f}
+05-11 07:18:00.805  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {6860bdde-d45a-4d1b-91f2-35c330dbc474}
+05-11 07:18:00.809  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {73350ca5-1915-4a52-8147-3368c535808d}
+05-11 07:18:00.811  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {f3628113-335f-448a-a563-8496845d715b}
+05-11 07:18:00.818  3522  3522 I AiAiTextClassifier: onDestroyTextClassificationSession = TextClassificationSessionId {437b88ed-f667-448c-bd2d-23521507a9e8}
+05-11 07:18:00.833   605   623 W System  : A resource failed to call HardwareBuffer.close. 
+05-11 07:18:00.836   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/base.apk' with 1 weak references
+05-11 07:18:00.839   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/split_AdsDynamite_installtime.apk' with 1 weak references
+05-11 07:18:00.840   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/split_CronetDynamite_installtime.apk' with 1 weak references
+05-11 07:18:00.841   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/split_DynamiteLoader_installtime.apk' with 1 weak references
+05-11 07:18:00.841   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/split_DynamiteModulesA_installtime.apk' with 1 weak references
+05-11 07:18:00.842   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/split_DynamiteModulesC_installtime.apk' with 1 weak references
+05-11 07:18:00.844   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/split_GoogleCertificates_installtime.apk' with 1 weak references
+05-11 07:18:00.844   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/split_MapsDynamite_installtime.apk' with 1 weak references
+05-11 07:18:00.845   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/split_MeasurementDynamite_installtime.apk' with 1 weak references
+05-11 07:18:00.864   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/split_all_locale_splits.apk' with 1 weak references
+05-11 07:18:00.865   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/split_config.en.apk' with 1 weak references
+05-11 07:18:00.865   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~7rsLK7HIZ624IXK1wZgbCg==/com.google.android.gms-6tK5wSQtZECpP2aNwnBgkw==/split_config.xxhdpi.apk' with 1 weak references
+05-11 07:18:00.869   605   623 W System  : A resource failed to call release. 
+05-11 07:18:00.869   605   623 W System  : A resource failed to call HardwareBuffer.close. 
+05-11 07:18:00.873   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/LatinIMEGooglePrebuilt/LatinIMEGooglePrebuilt.apk' with 1 weak references
+05-11 07:18:00.882   605   623 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/GoogleTTS/GoogleTTS.apk' with 1 weak references
+05-11 07:18:00.886   605   623 W System  : A resource failed to call release. 
+05-11 07:18:00.886   605   623 W System  : A resource failed to call HardwareBuffer.close. 
+05-11 07:18:13.774   894  1088 D EGL_emulation: app_time_stats: avg=13699.77ms min=13699.77ms max=13699.77ms count=1
+05-11 07:18:16.219  2838  2939 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:18:29.705   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.705   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.706   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.706   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.706   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.707   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.707   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.707   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.712   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.712   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.720  3388  3421 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:18:29.720  3388  3421 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:18:29.725   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.726   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.726   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.727   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.727   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.727   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.727   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:29.740  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:18:29.740  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:18:29.766  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:18:39.592  1002  1010 I rkstack.process: Background concurrent mark compact GC freed 2604KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 2728KB/5456KB, paused 571us,3.820ms total 114.844ms
+05-11 07:18:54.492   605   714 D ActivityManager: sync unfroze 2136 com.google.android.googlequicksearchbox:search for 6
+05-11 07:18:54.557   605   625 W ProcessStats: Tracking association SourceState{8db3ef3 system/1000 ImpBg #3847} whose proc state 6 is better than process ProcessState{2c972af com.google.android.googlequicksearchbox:search/10145 pkg=com.google.android.googlequicksearchbox} proc state 14 (0 skipped)
+05-11 07:18:54.606  2136  2136 I BgTaskExecutorImpl: (REDACTED) Starting %s background task %s.
+05-11 07:18:54.646  3388  6333 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+05-11 07:18:54.657  3388  6229 W TapAndPay: NfcAdapter is null while obtaining CardEmulation instance. [CONTEXT service_id=79 ]
+05-11 07:18:54.657  3388  6229 W TapAndPay: java.lang.NullPointerException: NfcAdapter is null
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at android.nfc.cardemulation.CardEmulation.getInstance(CardEmulation.java:170)
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at ehmd.<init>(:com.google.android.gms@251833038@25.18.33 (260800-756823100):15)
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at com.google.android.gms.tapandpay.hce.task.TapAndPayAidRegistrationTaskOperation.a(:com.google.android.gms@251833038@25.18.33 (260800-756823100):81)
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskChimeraService.a(:com.google.android.gms@251833038@25.18.33 (260800-756823100):32)
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at cfzd.call(:com.google.android.gms@251833038@25.18.33 (260800-756823100):30)
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at ayba.c(:com.google.android.gms@251833038@25.18.33 (260800-756823100):50)
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at ayba.run(:com.google.android.gms@251833038@25.18.33 (260800-756823100):70)
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at aygo.run(:com.google.android.gms@251833038@25.18.33 (260800-756823100):8)
+05-11 07:18:54.657  3388  6229 W TapAndPay: 	at java.lang.Thread.run(Thread.java:1012)
+05-11 07:18:54.676  2136  6334 I NetworkRecognitionRnr: Using pair HTTP connection
+05-11 07:18:54.686  3388  6229 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+05-11 07:18:54.691  2136  6337 I A       : [Upload] Connected
+05-11 07:18:54.737  2136  2286 W CronetNetworkRqstWrppr: Upload request without a content type.
+05-11 07:18:54.740  2136  6337 I NetworkRecognitionRnr: Using pair HTTP connection
+05-11 07:18:54.748  2136  6338 I A       : [Upload] Connected
+05-11 07:18:54.753  2136  2136 E A       : onError
+05-11 07:18:54.753  2136  2136 E A       : com.google.android.apps.gsa.shared.speech.b.l: errorCode: 65561, engine: 2
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.staticplugins.bp.a.f.a(PG:23)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.s3.o.hi(PG:13)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.ci.g.a.f.e(PG:9)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:162)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.iO(PG:26)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.s3.p.c(PG:102)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.s3.q.run(PG:1)
+05-11 07:18:54.753  2136  2136 E A       : 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+05-11 07:18:54.753  2136  2136 E A       : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.e.run(PG:12)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bg.run(PG:3)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bg.run(PG:3)
+05-11 07:18:54.753  2136  2136 E A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+05-11 07:18:54.753  2136  2136 E A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+05-11 07:18:54.753  2136  2136 E A       : 	at java.lang.Thread.run(Thread.java:1012)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.l.run(PG:42)
+05-11 07:18:54.753  2136  2136 E A       : Caused by: com.google.android.apps.gsa.shared.speech.b.n: errorCode: 65586, engine: 2
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.s3.o.hi(PG:6)
+05-11 07:18:54.753  2136  2136 E A       : 	... 14 more
+05-11 07:18:54.753  2136  2136 E A       : Caused by: com.google.android.apps.gsa.shared.speech.b.j: errorCode: 401, engine: 2
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.assistant.shared.n.i.b(PG:30)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.s3.producers.j.hs(PG:11)
+05-11 07:18:54.753  2136  2136 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:135)
+05-11 07:18:54.753  2136  2136 E A       : 	... 12 more
+05-11 07:18:54.758  2136  2136 W A       : Failed to sync device settings.
+05-11 07:18:54.799  3388  3696 W AbstractServiceBroker: calling package is not null : com.google.android.googlequicksearchbox for service ids : [40] [CONTEXT service_id=259 ]
+05-11 07:18:54.803   605   984 W JobScheduler: Job didn't exist in JobStore: 929194c #u0a145/-353 com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: (REDACTED) %s
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: com.google.android.apps.gsa.shared.speech.b.n: errorCode: 65586, engine: 2
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.s3.o.hi(PG:6)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.ci.g.a.f.e(PG:9)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:162)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.speech.k.a.g.iO(PG:26)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.s3.p.c(PG:102)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.s3.q.run(PG:1)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.shared.util.c.a.e.run(PG:12)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.shared.util.c.a.bg.run(PG:3)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.shared.util.c.a.bg.run(PG:3)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at java.lang.Thread.run(Thread.java:1012)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.shared.util.c.a.l.run(PG:42)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: Caused by: com.google.android.apps.gsa.shared.speech.b.j: errorCode: 401, engine: 2
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.assistant.shared.n.i.b(PG:30)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.s3.producers.j.hs(PG:11)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:135)
+05-11 07:18:54.971  2136  6334 E BgTaskExecutorImpl: 	... 12 more
+05-11 07:18:56.780   605   984 D ConnectivityService: requestNetwork for uid/pid:10145/2136 activeRequest: null callbackRequest: 178 [NetworkRequest [ REQUEST id=178, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Forbidden: LOCAL_NETWORK Uid: 10145 RequestorUid: 10145 RequestorPkg: com.google.android.googlequicksearchbox UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false
+05-11 07:18:56.798   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:56.801   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:56.801   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:56.801   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:18:56.805   605   778 D ConnectivityService: NetReassign [178 : null → 102] [c 1] [a 20] [i 3]
+05-11 07:18:56.806   605   778 D ConnectivityService: reportNetworkConnectivity(101, false) by 10145
+05-11 07:18:56.807  1002  3728 D NetworkMonitor/101: Forcing reevaluation for UID 10145. Dns signal count: 0
+05-11 07:18:56.811  1002  6340 D TrafficStats: tagSocket(128) with statsTag=0xffffff81, statsUid=-1
+05-11 07:18:56.812  1002  6341 D TrafficStats: tagSocket(129) with statsTag=0xffffff81, statsUid=-1
+05-11 07:18:56.814  1002  6340 D TrafficStats: tagSocket(128) with statsTag=0xffffff81, statsUid=-1
+05-11 07:18:56.814  1002  6341 D TrafficStats: tagSocket(129) with statsTag=0xffffff81, statsUid=-1
+05-11 07:18:56.824  1002  1002 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.826  1002  1002 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.828  1002  1002 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.829  1002  1002 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.830  1002  1002 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.831  1002  1002 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.833  1002  1002 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.834  1002  1002 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.836  1002  1002 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.837  1002  1002 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.838  1002  6340 D NetworkMonitor/101: PROBE_DNS www.google.com 27ms OK 74.125.23.147,74.125.23.99,74.125.23.105,74.125.23.103,74.125.23.106,74.125.23.104,2404:6800:4008:c19::6a,2404:6800:4008:c19::93,2404:6800:4008:c19::63,2404:6800:4008:c19::68
+05-11 07:18:56.838  1002  1002 D TrafficStats: tagSocket(128) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.839  1002  1002 D TrafficStats: tagSocket(128) with statsTag=0xffffffff, statsUid=-1
+05-11 07:18:56.841  1002  6341 D NetworkMonitor/101: PROBE_DNS connectivitycheck.gstatic.com 29ms OK 74.125.203.94,2404:6800:4008:c03::5e
+05-11 07:18:56.847  1002  6340 D TrafficStats: tagSocket(128) with statsTag=0xffffff81, statsUid=-1
+05-11 07:18:56.847  1002  6341 D TrafficStats: tagSocket(129) with statsTag=0xffffff81, statsUid=-1
+05-11 07:18:56.854  1002  6341 D NetworkMonitor/101: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 time=12ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Sun, 11 May 2025 07:18:59 GMT], X-Android-Received-Millis=[1746947936854], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1746947936851]}
+05-11 07:18:56.867  1002  6340 D NetworkMonitor/101: PROBE_HTTPS https://www.google.com/generate_204 time=26ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Sun, 11 May 2025 07:18:59 GMT], X-Android-Received-Millis=[1746947936866], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1746947936865]}
+05-11 07:18:56.868  1002  6339 D NetworkMonitor/101: isCaptivePortal: isSuccessful()=true isPortal()=false RedirectUrl=null isPartialConnectivity()=false Time=58ms
+05-11 07:18:56.869   605   778 D ConnectivityService: [101 WIFI] validation passed
+05-11 07:18:58.351  2136  6336 W A       : (REDACTED) [%s] response code: %d
+05-11 07:19:00.021  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:19:00.022  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:19:00.022  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:19:00.022  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:19:00.022  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:19:00.024  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:19:00.024  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:19:00.024  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:19:00.024  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:19:00.024  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:19:00.025  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:19:00.025  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:19:00.028  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-11 07:19:00.029  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:19:00.057  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:19:00.060  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:19:00.060  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:19:00.060  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:19:00.060  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:19:00.064   894   894 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-11 07:19:00.110   894  1088 D EGL_emulation: app_time_stats: avg=46335.68ms min=46335.68ms max=46335.68ms count=1
+05-11 07:19:00.146  1322  1886 D EGL_emulation: app_time_stats: avg=59987.38ms min=59987.38ms max=59987.38ms count=1
+05-11 07:19:00.167   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=20
+05-11 07:19:04.853   605   725 D ActivityManager: freezing 2136 com.google.android.googlequicksearchbox:search
+05-11 07:19:05.826   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.826   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.826   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.826   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.826   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.826   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.826   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.826   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.829   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.829   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.831  3388  3880 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:19:05.831  3388  3880 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:19:05.843   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.844   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.844   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.844   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.844   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.844   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.844   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:05.859  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:19:05.859  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:19:05.888  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:19:16.220  2838  2939 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:19:18.036   605   625 W AppOps  : Noting op not finished: uid 10144 pkg com.google.android.gms code 113 startTime of in progress event=1746944520418
+05-11 07:19:18.047   605  1723 W AppOps  : Noting op not finished: uid 10144 pkg com.google.android.gms code 113 startTime of in progress event=1746944520418
+05-11 07:19:18.056   605   984 W AppOps  : Noting op not finished: uid 10144 pkg com.google.android.gms code 113 startTime of in progress event=1746944520418
+05-11 07:19:18.059   605   984 W AppOps  : Noting op not finished: uid 10144 pkg com.google.android.gms code 79 startTime of in progress event=1746944520418
+05-11 07:19:18.065  3388  3545 I ActivityScheduler: nextTriggerTime: 5003948, in 238100ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 80000
+05-11 07:19:18.067  3388  3449 W AbstractServiceBroker: calling package is not null : com.google.android.gms for service ids : [41] [CONTEXT service_id=259 ]
+05-11 07:19:35.944   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.944   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.944   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.945   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.945   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.946   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.946   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.946   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.950   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.951   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.957  3388  4569 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:19:35.957  3388  4569 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:19:35.960   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.964   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.964   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.965   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.966   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.966   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.967   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:19:35.995  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:19:35.995  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:19:36.014  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:19:53.773   894  1088 D EGL_emulation: app_time_stats: avg=53662.75ms min=53662.75ms max=53662.75ms count=1
+05-11 07:20:00.039  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:20:00.039  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:20:00.039  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:20:00.039  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:20:00.040  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:20:00.042  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:20:00.042  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:20:00.042  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:20:00.042  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:20:00.042  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:20:00.043  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:20:00.043  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:20:00.050  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-11 07:20:00.051  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:20:00.056   894   894 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-11 07:20:00.056  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:20:00.059  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:20:00.059  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:20:00.059  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:20:00.059  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:20:00.085   894  1088 D EGL_emulation: app_time_stats: avg=6311.78ms min=6311.78ms max=6311.78ms count=1
+05-11 07:20:00.165  1322  1886 D EGL_emulation: app_time_stats: avg=60019.11ms min=60019.11ms max=60019.11ms count=1
+05-11 07:20:00.166   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=21
+05-11 07:20:00.512  3522  3534 I ogle.android.as: Background concurrent mark compact GC freed 6572KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 6973KB/13MB, paused 1.288ms,17.700ms total 473.622ms
+05-11 07:20:05.962   605   984 D WifiNl80211Manager: Scan result ready event
+05-11 07:20:05.962   605   984 D WifiNative: Scan result ready event
+05-11 07:20:05.972   605   771 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-11 07:20:06.021   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.021   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.021   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.021   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.021   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.022   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.022   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.022   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.024   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.025   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.032   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.034   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.035   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.035   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.036   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.036   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.036   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:20:06.042  3388  4569 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:20:06.042  3388  4569 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:20:06.048  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:20:06.048  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:20:06.095  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:20:16.219  2838  2939 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:20:20.417   605   713 I UsageStatsService: User[0] Flushing usage stats to disk
+05-11 07:20:33.753   894  1088 D EGL_emulation: app_time_stats: avg=33667.73ms min=33667.73ms max=33667.73ms count=1
+05-11 07:21:00.036  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:21:00.037  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:21:00.037  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:21:00.037  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:21:00.037  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:21:00.039  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:21:00.040  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:21:00.040  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:21:00.040  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:21:00.040  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:21:00.040  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:21:00.040  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:21:00.043  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-11 07:21:00.045  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:21:00.055  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:21:00.058  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:21:00.058  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:21:00.058  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:21:00.058  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:21:00.071   894   894 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-11 07:21:00.124   894  1088 D EGL_emulation: app_time_stats: avg=26370.42ms min=26370.42ms max=26370.42ms count=1
+05-11 07:21:00.137  1322  1886 D EGL_emulation: app_time_stats: avg=59972.00ms min=59972.00ms max=59972.00ms count=1
+05-11 07:21:00.172   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=22
+05-11 07:21:09.973  1002  3771 D ApfFilter: (wlan0): Adding RA fe80::2 -> ff02::1 1800s fec0::/64 86400s/14400s 
+05-11 07:21:13.727   894  1088 D EGL_emulation: app_time_stats: avg=13602.63ms min=13602.63ms max=13602.63ms count=1
+05-11 07:21:16.220  2838  2939 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:21:19.639   605  1723 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:21:19.639   605  1723 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:21:25.170  4034  6358 D MddListenableWorkerFactory: createWorker for class: com.google.apps.tiktok.contrib.work.TikTokListenableWorker
+05-11 07:21:25.442  4034  4034 I SyncManagerImpl: #sync(). Running Synclets and scheduling next sync.
+05-11 07:21:25.578  4034  4181 I SyncManagerImpl: Starting synclet: TemplateFetcherSynclet
+05-11 07:21:25.601  4034  4182 I TemplatesStore: cache hit! returning templates at version 
+05-11 07:21:25.690  4034  4181 I BugleMDD: Retrieved File Group is null
+05-11 07:21:25.698  4034  4182 W BugleSpam: failed fetching spam templates 20250510074257US
+05-11 07:21:25.698  4034  4182 W BugleSpam: java.io.IOException: Could not get URI for file:, mdd_file {    id: 20250510074257US
+05-11 07:21:25.698  4034  4182 W BugleSpam:     group: spam_fm_templates
+05-11 07:21:25.698  4034  4182 W BugleSpam: }
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at bimr.g(PG:93)
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at bimk.a(PG:7)
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at dqpg.a(PG:8)
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at dqpa.a(PG:7)
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at dqoh.d(PG:3)
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at dqoj.run(PG:42)
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at crzm.run(PG:3)
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at dnmw.run(PG:50)
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at cscj.run(PG:18)
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at cryt.run(PG:8)
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at java.lang.Thread.run(Thread.java:1012)
+05-11 07:21:25.698  4034  4182 W BugleSpam: 	at csaw.run(PG:64)
+05-11 07:21:25.699  4034  4182 W BugleSpam: couldn't get templates for 20250510074257US
+05-11 07:21:25.706  4034  4104 I SyncManagerImpl: #sync() complete
+05-11 07:21:25.707  4034  4105 I SyncManagerImpl: Completed sync. Scheduling next wakeup
+05-11 07:21:25.709  4034  4105 I SyncWorkManagerOneTimeS: Scheduling next onetime WorkManager workers
+05-11 07:21:25.740  4034  6358 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=3d9c7b96-eaee-4a88-8b75-c9cab1fb3354, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker,com.google.apps.tiktok.sync.impl.workmanager.SyncWorker,TikTokWorker#com.google.apps.tiktok.sync.impl.workmanager.SyncWorker } ]
+05-11 07:21:25.794  3388  4569 W AbstractServiceBroker: calling package is not null : com.google.android.apps.messaging for service ids : [40] [CONTEXT service_id=259 ]
+05-11 07:21:25.960   605   605 D ActivityManager: sync unfroze 1375 com.google.android.permissioncontroller for 27
+05-11 07:21:25.991   605   605 W Looper  : Slow dispatch took 120ms main h=android.app.ActivityThread$H c=null m=121
+05-11 07:21:26.299  4034  6360 I SyncWorkManagerOneTimeS: Successfully scheduled next onetime workers
+05-11 07:21:27.665   894   902 I ndroid.systemui: NativeAlloc concurrent mark compact GC freed 17MB AllocSpace bytes, 161(3220KB) LOS objects, 50% free, 20MB/40MB, paused 1.032ms,75.861ms total 1.473s
+05-11 07:21:27.666   894   902 W ndroid.systemui: Reducing the number of considered missed Gc histogram windows from 160 to 100
+05-11 07:21:27.812   894   904 W ndroid.systemui: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~9Rz7dIl-Bpw-zjtZihZ8LQ==/com.example.expensetracker-ouxyI5zOuRXphngGZCISrQ==/base.apk' with 2 weak references
+05-11 07:21:27.823   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.823   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.823   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.823   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.823   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.823   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.824   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.824   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.824   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.824   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.824   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.824   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.826   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.826   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.826   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.826   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.826   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.826   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.828   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.828   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.828   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.828   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.828   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.828   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.829   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.829   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.829   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.829   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.829   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.829   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.831   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.831   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.831   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.831   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.831   894   904 W System  : A resource failed to call release. 
+05-11 07:21:27.831   894   904 W System  : A resource failed to call release. 
+05-11 07:21:28.076   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:21:28.120  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:21:59.665   605   725 D ActivityManager: freezing 1375 com.google.android.permissioncontroller
+05-11 07:21:59.671   605   778 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+05-11 07:21:59.672   605   778 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+05-11 07:21:59.672   605   778 D InetDiagMessage: Destroyed live tcp sockets for uids={10199} in 2ms
+05-11 07:22:00.035  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:22:00.036  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:22:00.036  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:22:00.036  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:22:00.036  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:22:00.038  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:22:00.039  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:22:00.039  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:22:00.039  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:22:00.039  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:22:00.039  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:22:00.039  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:22:00.041  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-11 07:22:00.042  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:22:00.049  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:22:00.052  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:22:00.052  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:22:00.052  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:22:00.052  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:22:00.088   894   894 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-11 07:22:00.134   894  1088 D EGL_emulation: app_time_stats: avg=46404.35ms min=46404.35ms max=46404.35ms count=1
+05-11 07:22:00.161  1322  1886 D EGL_emulation: app_time_stats: avg=60023.75ms min=60023.75ms max=60023.75ms count=1
+05-11 07:22:00.193   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=23
+05-11 07:22:02.739  5234  5267 E bluetooth: system/gd/os/linux_generic/files.cc:223 FileCreatedTime: unable to read '/data/misc/bluetooth/logs/btsnooz_hci.log' file metadata, error: No such file or directory
+05-11 07:22:16.223  2838  2939 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:22:40.815   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:22:40.834   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:22:40.834  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {143e2ee7-f995-490d-ac5c-91a987550d86}
+05-11 07:22:40.854  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:22:40.899  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:22:40.904   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:22:40.913  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:22:43.625   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:22:43.628  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {6cee1320-237f-4061-bdc6-a31d515806e7}
+05-11 07:22:43.630  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:22:43.631   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:22:43.642  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:22:43.645   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:22:43.653  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:22:45.962   605  1401 D WifiNl80211Manager: Scan result ready event
+05-11 07:22:45.962   605  1401 D WifiNative: Scan result ready event
+05-11 07:22:45.971   605   771 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-11 07:22:53.739   894  1088 D EGL_emulation: app_time_stats: avg=53604.84ms min=53604.84ms max=53604.84ms count=1
+05-11 07:23:00.024  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:23:00.024  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:23:00.024  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:23:00.024  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:23:00.025  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:23:00.026  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:23:00.026  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:23:00.026  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:23:00.026  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:23:00.026  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:23:00.027  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:23:00.027  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:23:00.028  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-11 07:23:00.028  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:23:00.034  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:23:00.037  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:23:00.037  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:23:00.037  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:23:00.037  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:23:00.066   894   894 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-11 07:23:00.094   894  1088 D EGL_emulation: app_time_stats: avg=6354.52ms min=6354.52ms max=6354.52ms count=1
+05-11 07:23:00.140  1322  1886 D EGL_emulation: app_time_stats: avg=59978.26ms min=59978.26ms max=59978.26ms count=1
+05-11 07:23:00.149   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=24
+05-11 07:23:16.220  2838  2939 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:23:33.721   894  1088 D EGL_emulation: app_time_stats: avg=33627.03ms min=33627.03ms max=33627.03ms count=1
+05-11 07:23:34.532  3388  6319 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 5082315]
+05-11 07:23:34.560  3388  6319 W WakeLock: GCM_HB_ALARM release without a matched acquire!
+05-11 07:23:34.567  3388  3449 W AbstractServiceBroker: calling package is not null : com.google.android.gms for service ids : [218] [CONTEXT service_id=259 ]
+05-11 07:23:34.571  3388  6319 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 5492354]
+05-11 07:23:36.838   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.839   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.839   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.839   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.839   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.841   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.841   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.842   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.844   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.845   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.850  3388  4569 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:23:36.850  3388  4569 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:23:36.854   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.856   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.856   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.856   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.857   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.858   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.858   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:36.866  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:23:36.866  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:23:36.888  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:23:39.839   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.839   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.839   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.839   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.839   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.839   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.840   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.840   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.841   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.841   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.843  3388  3879 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:23:39.844  3388  3879 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:23:39.846  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:23:39.846  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:23:39.846   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.847   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.847   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.848   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.848   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.848   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.848   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:39.854  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:23:42.885   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.887   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.887   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.888   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.889   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.890   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.890   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.891   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.903   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.904   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.918  3388  3473 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:23:42.918  3388  3473 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:23:42.944   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.946   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.947   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.948   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.948   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.950   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.951   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:23:42.956  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:23:42.958  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:23:42.978  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:23:48.445   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:23:48.454   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:23:48.459  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {f47731cf-1f4e-4546-91c7-e4118c542b90}
+05-11 07:23:48.462   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:23:48.464   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:23:48.468  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {5fab222d-bed3-495b-a637-9cbb411695de}
+05-11 07:23:48.471  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:23:48.550  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:23:48.626  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:23:48.682  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:23:48.686   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:24:00.014  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:24:00.014  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:24:00.014  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:24:00.014  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:24:00.015  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:24:00.015  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:24:00.016  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:24:00.016  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:24:00.016  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:24:00.016  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:24:00.016  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:24:00.017  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:24:00.017  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-11 07:24:00.018  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:24:00.036  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:24:00.039  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:24:00.039  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:24:00.039  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:24:00.039  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:24:00.054   894   894 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-11 07:24:00.081   894  1088 D EGL_emulation: app_time_stats: avg=26359.12ms min=26359.12ms max=26359.12ms count=1
+05-11 07:24:00.114  1322  1886 D EGL_emulation: app_time_stats: avg=59974.15ms min=59974.15ms max=59974.15ms count=1
+05-11 07:24:00.146   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=25
+05-11 07:24:13.831   894  1088 D EGL_emulation: app_time_stats: avg=13749.97ms min=13749.97ms max=13749.97ms count=1
+05-11 07:24:16.215  2838  3055 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:24:17.333   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:24:17.358  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {21bc5c55-99b7-4e70-9ffa-38bd76c93c05}
+05-11 07:24:17.364   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:24:17.370  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:24:17.435  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:24:17.440   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:24:17.492  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:24:36.755   605  1723 W AppOps  : Noting op not finished: uid 10144 pkg com.google.android.gms code 113 startTime of in progress event=1746944520418
+05-11 07:24:36.764   605  1723 W AppOps  : Noting op not finished: uid 10144 pkg com.google.android.gms code 113 startTime of in progress event=1746944520418
+05-11 07:24:36.771   605  1230 W AppOps  : Noting op not finished: uid 10144 pkg com.google.android.gms code 113 startTime of in progress event=1746944520418
+05-11 07:24:36.775   605  1230 W AppOps  : Noting op not finished: uid 10144 pkg com.google.android.gms code 79 startTime of in progress event=1746944520418
+05-11 07:24:36.780  3388  3545 I ActivityScheduler: nextTriggerTime: 5322662, in 238100ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 80000
+05-11 07:24:36.782  3388  3449 W AbstractServiceBroker: calling package is not null : com.google.android.gms for service ids : [41] [CONTEXT service_id=259 ]
+05-11 07:24:42.855   894   894 D ZenModeController: Added callback class com.android.systemui.qs.tiles.DndTile$3
+05-11 07:24:42.864   894   894 D ZenModeController: Removed callback class com.android.systemui.qs.tiles.DndTile$3
+05-11 07:24:42.865   894  1039 I QuickAccessWalletTile: QAW service is unavailable, recreating the wallet client.
+05-11 07:24:42.873   894  1039 D ControlsListingControllerImpl: Subscribing callback, service count: 0
+05-11 07:24:42.880   894  1039 D ControlsListingControllerImpl: Unsubscribing callback
+05-11 07:25:00.048  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:25:00.048  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:25:00.048  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:25:00.048  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:25:00.049  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:25:00.050  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:25:00.051  3522  3595 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+05-11 07:25:00.051  3522  3595 I AiAiEcho: EchoTargets: 
+05-11 07:25:00.051  3522  3595 I AiAiEcho: Filtered by AiAi flag check: 
+05-11 07:25:00.051  3522  3595 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:25:00.051  3522  3595 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+05-11 07:25:00.052  3522  3595 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+05-11 07:25:00.053  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+05-11 07:25:00.054  3522  3595 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-11 07:25:00.062  1322  1322 D SsBaseTemplateCard: No text view can be set up
+05-11 07:25:00.064  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:25:00.065  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:25:00.065  1322  1322 D SsBaseTemplateCard: Passed-in item info is null
+05-11 07:25:00.065  1322  1322 I SsBaseTemplateCard: Secondary card pane is null
+05-11 07:25:00.091   894   894 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+05-11 07:25:00.134   894  1088 D EGL_emulation: app_time_stats: avg=46303.07ms min=46303.07ms max=46303.07ms count=1
+05-11 07:25:00.149  1322  1886 D EGL_emulation: app_time_stats: avg=60034.80ms min=60034.80ms max=60034.80ms count=1
+05-11 07:25:00.151   445   445 E SurfaceFlinger: Out of order buffers detected for RequestedLayerState{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#191 parentId=189} producedId=13 frameNumber=53 -> producedId=13 frameNumber=26
+05-11 07:25:13.117   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.118   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.118   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.118   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.119   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.119   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.119   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.119   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.122   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.123   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.133  3388  3879 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:25:13.134  3388  3879 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:25:13.134   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.135   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.136   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.137   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.137   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.137   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.137   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:13.147  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:25:13.147  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:25:13.168  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:25:15.882  3388  3879 W AbstractServiceBroker: calling package is not null : com.google.android.googlequicksearchbox for service ids : [40] [CONTEXT service_id=259 ]
+05-11 07:25:16.211  2838  2970 I BistoHotwordHelper: (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-11 07:25:20.101  1002  1010 I rkstack.process: Background concurrent mark compact GC freed 2536KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 2816KB/5632KB, paused 510us,17.953ms total 210.933ms
+05-11 07:25:24.215  3388  6371 I .gms.persistent: Explicit concurrent mark compact GC freed 3393KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 13MB/26MB, paused 1.276ms,16.404ms total 490.071ms
+05-11 07:25:25.962   605  1723 D WifiNl80211Manager: Scan result ready event
+05-11 07:25:25.962   605  1723 D WifiNative: Scan result ready event
+05-11 07:25:25.970   605   771 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-11 07:25:28.285   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.285   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.286   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.286   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.286   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.287   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.287   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.287   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.291   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.291   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.301   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.303   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.303   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.303   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.304   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.304   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.305   605   778 W IPCThreadState: Sending oneway calls to frozen process.
+05-11 07:25:28.305  3388  3879 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-11 07:25:28.305  3388  3879 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+05-11 07:25:28.309  4230  4287 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[94601c0a-a8dd]>Handler" thread_id=63 ]
+05-11 07:25:28.311  4230  4280 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=58 ]
+05-11 07:25:28.331  4230  4287 I BugleRcsEngine: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897] [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=63 ]
+05-11 07:25:31.692   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:25:31.701   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:25:31.704  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {abe8e930-4cd0-4d34-8008-76180a9f99d5}
+05-11 07:25:31.705  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:25:31.735  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:25:31.738   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:25:31.748  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:25:34.077   605   850 D androidtc: Initializing SystemTextClassifier, type = System
+05-11 07:25:34.079  3522  3522 I AiAiTextClassifier: onCreateTextClassificationSession = TextClassificationSessionId {949c6752-68ec-4a5f-9f34-fa327f7e6d71}
+05-11 07:25:34.081  3522  3606 I AiAiTranslate: C2T - not in a conversation
+05-11 07:25:34.082   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:25:34.091  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result
+05-11 07:25:34.095   894   894 I ClipboardListener: Clipboard overlay suppressed.
+05-11 07:25:34.098  3522  3613 I AiAiTextClassifier: GenerateLinks did not find valid links, returning empty result

@@ -73,7 +73,12 @@ public class BudgetFragment extends Fragment {
         expenseViewModel.getCurrentMonthExpenseSum().observe(getViewLifecycleOwner(), sum -> {
             double expenseSum = sum != null ? sum : 0.0;
             textViewCurrentSpending.setText(currencyFormat.format(expenseSum));
-            updateBudgetProgress(expenseViewModel.getMonthlyBudget().getValue());
+            
+            // Get current budget value and update progress
+            Double budget = expenseViewModel.getMonthlyBudget().getValue();
+            if (budget != null && budget > 0) {
+                updateBudgetProgress(budget);
+            }
         });
     }
 
@@ -139,7 +144,22 @@ public class BudgetFragment extends Fragment {
         }
         
         // Force update the UI components
-        progressIndicator.invalidate();
-        textViewRemaining.invalidate();
+        if (progressIndicator != null) {
+            progressIndicator.invalidate();
+            // Request layout to ensure the progress indicator is redrawn
+            progressIndicator.requestLayout();
+        }
+        
+        if (textViewRemaining != null) {
+            textViewRemaining.invalidate();
+            // Request layout to ensure the text view is redrawn
+            textViewRemaining.requestLayout();
+        }
+        
+        // Force parent view to redraw
+        if (getView() != null) {
+            getView().invalidate();
+            getView().requestLayout();
+        }
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Tracker</string>
+    <string name="app_name">Personal Finance</string>
     
     <!-- Navigation labels -->
     <string name="expenses">Expenses</string>
@@ -48,6 +48,10 @@
     <string name="year">Year</string>
     <string name="total_expenses">Total Expenses</string>
     <string name="no_data_for_selected_period">No data for selected period</string>
+    
+    <!-- Expense Item Actions -->
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
     
     <!-- Categories -->
     <string name="categories">Categories</string>

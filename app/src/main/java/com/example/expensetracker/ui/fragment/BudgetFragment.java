@@ -112,28 +112,30 @@ public class BudgetFragment extends Fragment {
         
         Double expenseSum = expenseViewModel.getCurrentMonthExpenseSum().getValue();
         double spent = expenseSum != null ? expenseSum : 0.0;
-        // Fix for remainder balance calculation
-        double remaining = Math.max(0, budget - spent);
+        // Calculate remaining amount (can be negative if exceeded)
+        double remaining = budget - spent;
         
-        // Update remaining text
-        textViewRemaining.setText(currencyFormat.format(remaining));
-        
-        // Update progress indicator
+        // Update progress indicator first
         int progress = budget > 0 ? (int) ((spent / budget) * 100) : 0;
         progressIndicator.setProgress(Math.min(progress, 100));
         
-        // Change color based on progress
+        // Change color based on progress and update remaining text
         if (progress >= 100) {
             progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_exceeded, null));
             textViewRemaining.setTextColor(getResources().getColor(R.color.budget_exceeded, null));
             // Show actual remaining amount (negative) when budget is exceeded
-            textViewRemaining.setText(currencyFormat.format(budget - spent));
+            textViewRemaining.setText(currencyFormat.format(remaining));
         } else if (progress >= 80) {
             progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_warning, null));
             textViewRemaining.setTextColor(getResources().getColor(R.color.budget_warning, null));
+            textViewRemaining.setText(currencyFormat.format(remaining));
         } else {
             progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_good, null));
             textViewRemaining.setTextColor(getResources().getColor(R.color.budget_good, null));
+            textViewRemaining.setText(currencyFormat.format(remaining));
         }
+        
+        // Force update the progress indicator
+        progressIndicator.invalidate();
     }
 }

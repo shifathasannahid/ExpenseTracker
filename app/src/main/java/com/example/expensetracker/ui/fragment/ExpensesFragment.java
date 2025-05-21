@@ -87,6 +87,34 @@ public class ExpensesFragment extends Fragment implements ExpenseAdapter.OnItemC
     @Override
     public void onItemClick(Expense expense) {
         // Navigate to edit expense screen
+        navigateToEditExpense(expense);
+    }
+    
+    @Override
+    public void onEditClick(Expense expense) {
+        // Navigate to edit expense screen
+        navigateToEditExpense(expense);
+    }
+    
+    @Override
+    public void onDeleteClick(Expense expense) {
+        // Show confirmation dialog before deleting
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle("Delete Expense")
+                .setMessage("Are you sure you want to delete this expense?")
+                .setPositiveButton("Delete", (dialog, which) -> {
+                    // Delete the expense
+                    expenseViewModel.delete(expense);
+                    Toast.makeText(requireContext(), "Expense deleted", Toast.LENGTH_SHORT).show();
+                })
+                .setNegativeButton("Cancel", null)
+                .show();
+    }
+    
+    /**
+     * Helper method to navigate to edit expense screen
+     */
+    private void navigateToEditExpense(Expense expense) {
         Bundle args = new Bundle();
         args.putLong("expenseId", expense.getId());
         Navigation.findNavController(requireView())

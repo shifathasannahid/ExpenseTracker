@@ -31,10 +31,12 @@ public class ExpenseAdapter extends ListAdapter<Expense, ExpenseAdapter.ExpenseV
     private final NumberFormat currencyFormat;
     
     /**
-     * Interface for handling item clicks
+     * Interface for handling item clicks and actions
      */
     public interface OnItemClickListener {
         void onItemClick(Expense expense);
+        void onEditClick(Expense expense);
+        void onDeleteClick(Expense expense);
     }
     
     /**
@@ -115,11 +117,27 @@ public class ExpenseAdapter extends ListAdapter<Expense, ExpenseAdapter.ExpenseV
             textViewNotes = itemView.findViewById(R.id.text_view_notes);
             cardView = itemView.findViewById(R.id.card_view_expense);
             
-            // Set click listener
+            // Set click listener for the card
             itemView.setOnClickListener(v -> {
                 int position = getAdapterPosition();
                 if (listener != null && position != RecyclerView.NO_POSITION) {
                     listener.onItemClick(getItem(position));
+                }
+            });
+            
+            // Set click listener for edit button
+            itemView.findViewById(R.id.button_edit).setOnClickListener(v -> {
+                int position = getAdapterPosition();
+                if (listener != null && position != RecyclerView.NO_POSITION) {
+                    listener.onEditClick(getItem(position));
+                }
+            });
+            
+            // Set click listener for delete button
+            itemView.findViewById(R.id.button_delete).setOnClickListener(v -> {
+                int position = getAdapterPosition();
+                if (listener != null && position != RecyclerView.NO_POSITION) {
+                    listener.onDeleteClick(getItem(position));
                 }
             });
         }

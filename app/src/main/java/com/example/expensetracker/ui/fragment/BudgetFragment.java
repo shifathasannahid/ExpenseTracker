@@ -84,7 +84,7 @@ public class BudgetFragment extends Fragment {
 
     /**
      * Save the budget amount entered by the user
-     * Adds the new budget amount to the existing budget
+     * Sets the new budget amount directly (not adding to existing budget)
      */
     private void saveBudget() {
         String budgetStr = editTextBudget.getText() != null ? editTextBudget.getText().toString() : "";
@@ -101,17 +101,13 @@ public class BudgetFragment extends Fragment {
                 return;
             }
             
-            // Get current budget and add the new amount to it
-            Double currentBudget = expenseViewModel.getMonthlyBudget().getValue();
-            double totalBudget = (currentBudget != null ? currentBudget : 0) + newBudgetAmount;
-            
-            // Set the updated total budget
-            expenseViewModel.setMonthlyBudget(totalBudget);
+            // Set the new budget amount directly (not adding to existing budget)
+            expenseViewModel.setMonthlyBudget(newBudgetAmount);
             textInputLayoutBudget.setError(null);
             editTextBudget.setText("");
             
             // Update the budget progress with the new budget value
-            updateBudgetProgress(totalBudget);
+            updateBudgetProgress(newBudgetAmount);
         } catch (NumberFormatException e) {
             textInputLayoutBudget.setError(getString(R.string.error_invalid_number));
         }

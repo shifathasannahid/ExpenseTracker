@@ -84,6 +84,7 @@ public class BudgetFragment extends Fragment {
 
     /**
      * Save the budget amount entered by the user
+     * Adds the new budget amount to the existing budget
      */
     private void saveBudget() {
         String budgetStr = editTextBudget.getText() != null ? editTextBudget.getText().toString() : "";
@@ -94,13 +95,18 @@ public class BudgetFragment extends Fragment {
         }
         
         try {
-            double budget = Double.parseDouble(budgetStr);
-            if (budget <= 0) {
+            double newBudgetAmount = Double.parseDouble(budgetStr);
+            if (newBudgetAmount <= 0) {
                 textInputLayoutBudget.setError(getString(R.string.error_negative_budget));
                 return;
             }
             
-            expenseViewModel.setMonthlyBudget(budget);
+            // Get current budget and add the new amount to it
+            Double currentBudget = expenseViewModel.getMonthlyBudget().getValue();
+            double totalBudget = (currentBudget != null ? currentBudget : 0) + newBudgetAmount;
+            
+            // Set the updated total budget
+            expenseViewModel.setMonthlyBudget(totalBudget);
             textInputLayoutBudget.setError(null);
             editTextBudget.setText("");
         } catch (NumberFormatException e) {
@@ -122,13 +128,13 @@ public class BudgetFragment extends Fragment {
         // Calculate remaining amount (can be negative if exceeded)
         double remaining = budget - spent;
         
-        // Update remaining text with the current value
+        // Update remaining text with the current value (will show negative if exceeded)
         textViewRemaining.setText(currencyFormat.format(remaining));
         
         // Calculate progress percentage
         int progress = (int) ((spent / budget) * 100);
         
-        // Ensure progress doesn't exceed 100% for visual purposes
+        // Ensure progress doesn't exceed 100% for visual purposes only
         progressIndicator.setProgress(Math.min(progress, 100));
         
         // Change color based on progress

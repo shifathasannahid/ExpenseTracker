@@ -109,6 +109,9 @@ public class BudgetFragment extends Fragment {
             expenseViewModel.setMonthlyBudget(totalBudget);
             textInputLayoutBudget.setError(null);
             editTextBudget.setText("");
+            
+            // Update the budget progress with the new budget value
+            updateBudgetProgress(totalBudget);
         } catch (NumberFormatException e) {
             textInputLayoutBudget.setError(getString(R.string.error_invalid_number));
         }

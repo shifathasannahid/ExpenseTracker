@@ -108,34 +108,38 @@ public class BudgetFragment extends Fragment {
      * @param budget The current budget amount
      */
     private void updateBudgetProgress(Double budget) {
-        if (budget == null) return;
+        if (budget == null || budget <= 0) return;
         
+        // Get the latest expense sum from view model
         Double expenseSum = expenseViewModel.getCurrentMonthExpenseSum().getValue();
         double spent = expenseSum != null ? expenseSum : 0.0;
+        
         // Calculate remaining amount (can be negative if exceeded)
         double remaining = budget - spent;
         
-        // Update progress indicator first
-        int progress = budget > 0 ? (int) ((spent / budget) * 100) : 0;
+        // Update remaining text with the current value
+        textViewRemaining.setText(currencyFormat.format(remaining));
+        
+        // Calculate progress percentage
+        int progress = (int) ((spent / budget) * 100);
+        
+        // Ensure progress doesn't exceed 100% for visual purposes
         progressIndicator.setProgress(Math.min(progress, 100));
         
-        // Change color based on progress and update remaining text
+        // Change color based on progress
         if (progress >= 100) {
             progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_exceeded, null));
             textViewRemaining.setTextColor(getResources().getColor(R.color.budget_exceeded, null));
-            // Show actual remaining amount (negative) when budget is exceeded
-            textViewRemaining.setText(currencyFormat.format(remaining));
         } else if (progress >= 80) {
             progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_warning, null));
             textViewRemaining.setTextColor(getResources().getColor(R.color.budget_warning, null));
-            textViewRemaining.setText(currencyFormat.format(remaining));
         } else {
             progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_good, null));
             textViewRemaining.setTextColor(getResources().getColor(R.color.budget_good, null));
-            textViewRemaining.setText(currencyFormat.format(remaining));
         }
         
-        // Force update the progress indicator
+        // Force update the UI components
         progressIndicator.invalidate();
+        textViewRemaining.invalidate();
     }
 }

@@ -128,36 +128,50 @@ public class BudgetFragment extends Fragment {
         double remaining = budget - spent;
         
         // Update remaining text with the current value (will show negative if exceeded)
-        textViewRemaining.setText(currencyFormat.format(remaining));
+        if (textViewRemaining != null) {
+            textViewRemaining.setText(currencyFormat.format(remaining));
+        }
         
         // Calculate progress percentage
         int progress = (int) ((spent / budget) * 100);
         
         // Ensure progress doesn't exceed 100% for visual purposes only
-        progressIndicator.setProgress(Math.min(progress, 100));
+        if (progressIndicator != null) {
+            progressIndicator.setProgress(Math.min(progress, 100));
+        }
         
         // Change color based on progress
         if (progress >= 100) {
-            progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_exceeded, null));
-            textViewRemaining.setTextColor(getResources().getColor(R.color.budget_exceeded, null));
+            if (progressIndicator != null) {
+                progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_exceeded, null));
+            }
+            if (textViewRemaining != null) {
+                textViewRemaining.setTextColor(getResources().getColor(R.color.budget_exceeded, null));
+            }
         } else if (progress >= 80) {
-            progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_warning, null));
-            textViewRemaining.setTextColor(getResources().getColor(R.color.budget_warning, null));
+            if (progressIndicator != null) {
+                progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_warning, null));
+            }
+            if (textViewRemaining != null) {
+                textViewRemaining.setTextColor(getResources().getColor(R.color.budget_warning, null));
+            }
         } else {
-            progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_good, null));
-            textViewRemaining.setTextColor(getResources().getColor(R.color.budget_good, null));
+            if (progressIndicator != null) {
+                progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_good, null));
+            }
+            if (textViewRemaining != null) {
+                textViewRemaining.setTextColor(getResources().getColor(R.color.budget_good, null));
+            }
         }
         
         // Force update the UI components
         if (progressIndicator != null) {
             progressIndicator.invalidate();
-            // Request layout to ensure the progress indicator is redrawn
             progressIndicator.requestLayout();
         }
         
         if (textViewRemaining != null) {
             textViewRemaining.invalidate();
-            // Request layout to ensure the text view is redrawn
             textViewRemaining.requestLayout();
         }
         

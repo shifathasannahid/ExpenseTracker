@@ -63,23 +63,35 @@ public class BudgetFragment extends Fragment {
         // Set up budget save button
         buttonSaveBudget.setOnClickListener(v -> saveBudget());
 
-        // Observe budget
+        // Observe budget and expenses together to ensure consistent updates
         expenseViewModel.getMonthlyBudget().observe(getViewLifecycleOwner(), budget -> {
-            textViewCurrentBudget.setText(currencyFormat.format(budget));
-            updateBudgetProgress(budget);
+            if (textViewCurrentBudget != null) {
+                textViewCurrentBudget.setText(currencyFormat.format(budget));
+            }
+            updateBudgetUI();
         });
 
         // Observe current month expenses
         expenseViewModel.getCurrentMonthExpenseSum().observe(getViewLifecycleOwner(), sum -> {
             double expenseSum = sum != null ? sum : 0.0;
-            textViewCurrentSpending.setText(currencyFormat.format(expenseSum));
-            
-            // Get current budget value and update progress
-            Double budget = expenseViewModel.getMonthlyBudget().getValue();
-            if (budget != null && budget > 0) {
-                updateBudgetProgress(budget);
+            if (textViewCurrentSpending != null) {
+                textViewCurrentSpending.setText(currencyFormat.format(expenseSum));
             }
+            updateBudgetUI();
         });
+    }
+    
+    /**
+     * Update all budget UI elements based on current data
+     * This ensures consistent updates across all related UI elements
+     */
+    private void updateBudgetUI() {
+        Double budget = expenseViewModel.getMonthlyBudget().getValue();
+        Double expenseSum = expenseViewModel.getCurrentMonthExpenseSum().getValue();
+        
+        if (budget != null && budget > 0) {
+            updateBudgetProgress(budget);
+        }
     }
 
     /**
@@ -132,8 +144,11 @@ public class BudgetFragment extends Fragment {
             textViewRemaining.setText(currencyFormat.format(remaining));
         }
         
-        // Calculate progress percentage
-        int progress = (int) ((spent / budget) * 100);
+        // Calculate progress percentage (avoid division by zero)
+        int progress = 0;
+        if (budget > 0) {
+            progress = (int) ((spent / budget) * 100);
+        }
         
         // Ensure progress doesn't exceed 100% for visual purposes only
         if (progressIndicator != null) {
@@ -141,44 +156,44 @@ public class BudgetFragment extends Fragment {
         }
         
         // Change color based on progress
+        int colorResId;
         if (progress >= 100) {
-            if (progressIndicator != null) {
-                progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_exceeded, null));
-            }
-            if (textViewRemaining != null) {
-                textViewRemaining.setTextColor(getResources().getColor(R.color.budget_exceeded, null));
-            }
+            colorResId = R.color.budget_exceeded;
         } else if (progress >= 80) {
-            if (progressIndicator != null) {
-                progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_warning, null));
-            }
-            if (textViewRemaining != null) {
-                textViewRemaining.setTextColor(getResources().getColor(R.color.budget_warning, null));
-            }
+            colorResId = R.color.budget_warning;
         } else {
+            colorResId = R.color.budget_good;
+        }
+        
+        // Apply colors to UI components
+        if (getContext() != null) {
+            int color = getResources().getColor(colorResId, null);
+            
             if (progressIndicator != null) {
-                progressIndicator.setIndicatorColor(getResources().getColor(R.color.budget_good, null));
+                progressIndicator.setIndicatorColor(color);
+                progressIndicator.invalidate();
             }
+            
             if (textViewRemaining != null) {
-                textViewRemaining.setTextColor(getResources().getColor(R.color.budget_good, null));
+                textViewRemaining.setTextColor(color);
+                textViewRemaining.invalidate();
             }
         }
         
-        // Force update the UI components
+        // Force layout updates to ensure UI reflects current state
         if (progressIndicator != null) {
-            progressIndicator.invalidate();
             progressIndicator.requestLayout();
         }
         
         if (textViewRemaining != null) {
-            textViewRemaining.invalidate();
             textViewRemaining.requestLayout();
         }
         
         // Force parent view to redraw
-        if (getView() != null) {
-            getView().invalidate();
-            getView().requestLayout();
+        View rootView = getView();
+        if (rootView != null) {
+            rootView.invalidate();
+            rootView.requestLayout();
         }
     }
 }

@@ -122,39 +122,68 @@ public class StatisticsFragment extends Fragment {
      * Update charts based on selected month and year
      */
     private void updateCharts() {
+        System.out.println("DEBUG: StatisticsFragment.updateCharts called");
+        
         int selectedMonth = spinnerMonth.getSelectedItemPosition() + 1; // +1 because Calendar months are 0-based
         int selectedYear = Integer.parseInt(spinnerYear.getSelectedItem().toString());
+        
+        System.out.println("DEBUG: Selected month: " + selectedMonth + ", Selected year: " + selectedYear);
 
         // Update ViewModel with selected month and year
         expenseViewModel.setCurrentMonthAndYear(selectedYear, selectedMonth);
+        System.out.println("DEBUG: Updated ViewModel with selected month and year");
 
         // Observe monthly expense sum
+        System.out.println("DEBUG: Setting up expense sum observer");
         expenseViewModel.getCurrentMonthExpenseSum().observe(getViewLifecycleOwner(), sum -> {
+            System.out.println("DEBUG: Expense sum updated: " + sum);
             if (sum != null) {
                 textViewTotalExpenses.setText(currencyFormat.format(sum));
+                System.out.println("DEBUG: Updated total expenses text: " + currencyFormat.format(sum));
             } else {
                 textViewTotalExpenses.setText(currencyFormat.format(0));
+                System.out.println("DEBUG: Updated total expenses text with zero");
             }
         });
 
         // Observe category sums for charts
+        System.out.println("DEBUG: Setting up category sums observer");
         expenseViewModel.getCurrentMonthCategorySums().observe(getViewLifecycleOwner(), categorySums -> {
-            if (categorySums != null && !categorySums.isEmpty()) {
-                // Show charts
-                pieChart.setVisibility(View.VISIBLE);
-                barChart.setVisibility(View.VISIBLE);
-                requireView().findViewById(R.id.text_view_no_data).setVisibility(View.GONE);
+            if (categorySums != null) {
+                System.out.println("DEBUG: Category sums updated, count: " + categorySums.size());
+                
+                if (!categorySums.isEmpty()) {
+                    System.out.println("DEBUG: Category sums not empty, updating charts");
+                    // Show charts
+                    pieChart.setVisibility(View.VISIBLE);
+                    barChart.setVisibility(View.VISIBLE);
+                    requireView().findViewById(R.id.text_view_no_data).setVisibility(View.GONE);
 
-                // Update charts
-                ChartHelper.setupPieChart(pieChart, categorySums, requireContext());
-                ChartHelper.setupBarChart(barChart, categorySums, requireContext());
+                    // Update charts
+                    System.out.println("DEBUG: Setting up pie chart");
+                    ChartHelper.setupPieChart(pieChart, categorySums, requireContext());
+                    
+                    System.out.println("DEBUG: Setting up bar chart");
+                    ChartHelper.setupBarChart(barChart, categorySums, requireContext());
+                    
+                    System.out.println("DEBUG: Charts updated successfully");
+                } else {
+                    System.out.println("DEBUG: Category sums empty, showing no data message");
+                    // Show no data message
+                    pieChart.setVisibility(View.GONE);
+                    barChart.setVisibility(View.GONE);
+                    requireView().findViewById(R.id.text_view_no_data).setVisibility(View.VISIBLE);
+                }
             } else {
+                System.out.println("DEBUG: Category sums null, showing no data message");
                 // Show no data message
                 pieChart.setVisibility(View.GONE);
                 barChart.setVisibility(View.GONE);
                 requireView().findViewById(R.id.text_view_no_data).setVisibility(View.VISIBLE);
             }
         });
+        
+        System.out.println("DEBUG: updateCharts setup complete");
     }
 
     /**

@@ -70,25 +70,35 @@ public class ExpenseRepository {
     }
     
     /**
-     * Get monthly expense sum
+     * Get the sum of expenses for a specific month
      * @param year Year
      * @param month Month (1-12)
      * @return LiveData containing the sum
      */
     public LiveData<Double> getMonthlyExpenseSum(int year, int month) {
+        System.out.println("DEBUG: ExpenseRepository.getMonthlyExpenseSum called for year: " + year + ", month: " + month);
         Date[] dates = getMonthStartAndEndDates(year, month);
-        return expenseDao.getMonthlyExpenseSum(dates[0], dates[1]);
+        System.out.println("DEBUG: Date range for expense sum: " + dates[0] + " to " + dates[1]);
+        
+        LiveData<Double> result = expenseDao.getMonthlyExpenseSum(dates[0], dates[1]);
+        System.out.println("DEBUG: Returning LiveData for monthly expense sum");
+        return result;
     }
     
     /**
-     * Get monthly category sums
+     * Get the sum of expenses for each category in a specific month
      * @param year Year
      * @param month Month (1-12)
      * @return LiveData list of category sums
      */
     public LiveData<List<CategorySum>> getMonthlyCategorySums(int year, int month) {
+        System.out.println("DEBUG: ExpenseRepository.getMonthlyCategorySums called for year: " + year + ", month: " + month);
         Date[] dates = getMonthStartAndEndDates(year, month);
-        return expenseDao.getMonthlyCategorySums(dates[0], dates[1]);
+        System.out.println("DEBUG: Date range for category sums: " + dates[0] + " to " + dates[1]);
+        
+        LiveData<List<CategorySum>> result = expenseDao.getMonthlyCategorySums(dates[0], dates[1]);
+        System.out.println("DEBUG: Returning LiveData for monthly category sums");
+        return result;
     }
     
     /**

@@ -101,9 +101,20 @@ public class ExpenseViewModel extends AndroidViewModel {
      * @return LiveData containing the sum
      */
     public LiveData<Double> getCurrentMonthExpenseSum() {
+        System.out.println("DEBUG: ExpenseViewModel.getCurrentMonthExpenseSum called");
+        
         int year = currentYear.getValue() != null ? currentYear.getValue() : Calendar.getInstance().get(Calendar.YEAR);
         int month = currentMonth.getValue() != null ? currentMonth.getValue() : Calendar.getInstance().get(Calendar.MONTH) + 1;
-        return repository.getMonthlyExpenseSum(year, month);
+        
+        System.out.println("DEBUG: Getting expense sum for year: " + year + ", month: " + month);
+        LiveData<Double> result = repository.getMonthlyExpenseSum(year, month);
+        
+        // Add an observer to log the value when it changes
+        result.observeForever(sum -> {
+            System.out.println("DEBUG: Expense sum LiveData updated with value: " + sum);
+        });
+        
+        return result;
     }
     
     /**
@@ -111,9 +122,27 @@ public class ExpenseViewModel extends AndroidViewModel {
      * @return LiveData list of category sums
      */
     public LiveData<List<CategorySum>> getCurrentMonthCategorySums() {
+        System.out.println("DEBUG: ExpenseViewModel.getCurrentMonthCategorySums called");
+        
         int year = currentYear.getValue() != null ? currentYear.getValue() : Calendar.getInstance().get(Calendar.YEAR);
         int month = currentMonth.getValue() != null ? currentMonth.getValue() : Calendar.getInstance().get(Calendar.MONTH) + 1;
-        return repository.getMonthlyCategorySums(year, month);
+        
+        System.out.println("DEBUG: Getting category sums for year: " + year + ", month: " + month);
+        LiveData<List<CategorySum>> result = repository.getMonthlyCategorySums(year, month);
+        
+        // Add an observer to log the values when they change
+        result.observeForever(categorySums -> {
+            if (categorySums != null) {
+                System.out.println("DEBUG: Category sums LiveData updated with " + categorySums.size() + " categories");
+                for (CategorySum categorySum : categorySums) {
+                    System.out.println("DEBUG: Category: " + categorySum.category + ", Sum: " + categorySum.total);
+                }
+            } else {
+                System.out.println("DEBUG: Category sums LiveData updated with null value");
+            }
+        });
+        
+        return result;
     }
     
     /**
@@ -146,7 +175,15 @@ public class ExpenseViewModel extends AndroidViewModel {
      * @param budget Budget amount
      */
     public void setMonthlyBudget(double budget) {
+        System.out.println("DEBUG: ExpenseViewModel.setMonthlyBudget called with value: " + budget);
+        double oldValue = monthlyBudget.getValue() != null ? monthlyBudget.getValue() : 0.0;
+        System.out.println("DEBUG: ExpenseViewModel.setMonthlyBudget old value: " + oldValue);
+        
         monthlyBudget.setValue(budget);
+        
+        System.out.println("DEBUG: ExpenseViewModel.setMonthlyBudget new value set: " + budget);
+        System.out.println("DEBUG: ExpenseViewModel.setMonthlyBudget current value: " + 
+                          (monthlyBudget.getValue() != null ? monthlyBudget.getValue() : "null"));
     }
     
     /**
@@ -163,8 +200,17 @@ public class ExpenseViewModel extends AndroidViewModel {
      * @param month Month (1-12)
      */
     public void setCurrentMonthAndYear(int year, int month) {
+        System.out.println("DEBUG: ExpenseViewModel.setCurrentMonthAndYear called with year: " + year + ", month: " + month);
+        
+        Integer oldYear = currentYear.getValue();
+        Integer oldMonth = currentMonth.getValue();
+        System.out.println("DEBUG: Old values - year: " + oldYear + ", month: " + oldMonth);
+        
         currentYear.setValue(year);
         currentMonth.setValue(month);
+        
+        System.out.println("DEBUG: New values set - year: " + year + ", month: " + month);
+        System.out.println("DEBUG: Current values - year: " + currentYear.getValue() + ", month: " + currentMonth.getValue());
     }
     
     /**

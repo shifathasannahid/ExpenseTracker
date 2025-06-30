@@ -90,6 +90,13 @@ public class BudgetFragment extends Fragment {
             updateBudgetUI();
         });
         
+        // Observe all expenses to ensure UI updates when expenses are added or removed
+        expenseViewModel.getAllExpenses().observe(getViewLifecycleOwner(), expenses -> {
+            System.out.println("DEBUG: All expenses LiveData updated with " + (expenses != null ? expenses.size() : 0) + " items");
+            // This will trigger a UI update whenever any expense is added, updated, or removed
+            updateBudgetUI();
+        });
+        
         // Force initial UI update
         System.out.println("DEBUG: Forcing initial UI update");
         updateBudgetUI();

@@ -34,7 +34,6 @@ public class BudgetFragment extends Fragment {
     private Button buttonSaveBudget;
     private TextView textViewCurrentBudget;
     private TextView textViewCurrentSpending;
-    private TextView textViewRemaining;
     private LinearProgressIndicator progressIndicator;
     private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("bn", "BD"));
 
@@ -54,7 +53,6 @@ public class BudgetFragment extends Fragment {
         buttonSaveBudget = view.findViewById(R.id.button_save_budget);
         textViewCurrentBudget = view.findViewById(R.id.text_view_current_budget);
         textViewCurrentSpending = view.findViewById(R.id.text_view_current_spending);
-        textViewRemaining = view.findViewById(R.id.text_view_remaining);
         progressIndicator = view.findViewById(R.id.progress_indicator);
 
         // Set up ViewModel
@@ -217,18 +215,8 @@ public class BudgetFragment extends Fragment {
         
         double spent = expenseSum != null ? expenseSum : 0.0;
         
-        // Calculate remaining amount (can be negative if exceeded)
-        double remaining = budget - spent;
-        
-        System.out.println("DEBUG: Updating UI - Budget: " + budget + ", Spent: " + spent + ", Remaining: " + remaining);
-        
-        // Update remaining text with the current value (will show negative if exceeded)
-        if (textViewRemaining != null) {
-            textViewRemaining.setText(currencyFormat.format(remaining));
-            System.out.println("DEBUG: Updated textViewRemaining with: " + currencyFormat.format(remaining));
-        } else {
-            System.out.println("DEBUG: textViewRemaining is null");
-        }
+        // Remaining value calculation removed
+        System.out.println("DEBUG: Updating UI - Budget: " + budget + ", Spent: " + spent);
         
         // Calculate progress percentage (avoid division by zero)
         int progress = 0;
@@ -271,11 +259,7 @@ public class BudgetFragment extends Fragment {
                     System.out.println("DEBUG: Applied color to progressIndicator");
                 }
                 
-                if (textViewRemaining != null) {
-                    textViewRemaining.setTextColor(color);
-                    textViewRemaining.invalidate();
-                    System.out.println("DEBUG: Applied color to textViewRemaining");
-                }
+                // Color application to remaining text removed
             } catch (Exception e) {
                 System.out.println("DEBUG: Error applying colors: " + e.getMessage());
             }
@@ -289,10 +273,7 @@ public class BudgetFragment extends Fragment {
             System.out.println("DEBUG: Requested layout for progressIndicator");
         }
         
-        if (textViewRemaining != null) {
-            textViewRemaining.requestLayout();
-            System.out.println("DEBUG: Requested layout for textViewRemaining");
-        }
+        // Layout update for remaining text removed
         
         // Force parent view to redraw
         View rootView = getView();

@@ -134,28 +134,7 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/remaining_label"
-                        android:textAppearance="?attr/textAppearanceBody1" />
-
-                    <TextView
-                        android:id="@+id/text_view_remaining"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?attr/textAppearanceBody1"
-                        android:textStyle="bold"
-                        tools:text="BDT 250.00" />
-
-                </LinearLayout>
+                <!-- Remaining value field removed -->
 
                 <TextView
                     android:layout_width="match_parent"

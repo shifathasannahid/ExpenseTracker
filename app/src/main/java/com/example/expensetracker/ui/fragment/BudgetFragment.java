@@ -65,17 +65,28 @@ public class BudgetFragment extends Fragment {
 
         System.out.println("DEBUG: Setting up LiveData observers");
         
-        // Observe budget changes
+        // Observe budget and expenses together to ensure consistent updates
         expenseViewModel.getMonthlyBudget().observe(getViewLifecycleOwner(), budget -> {
             System.out.println("DEBUG: Budget LiveData updated: " + budget);
-            // Call updateBudgetUI to refresh all UI elements
+            if (textViewCurrentBudget != null) {
+                textViewCurrentBudget.setText(currencyFormat.format(budget));
+                System.out.println("DEBUG: Updated textViewCurrentBudget");
+            } else {
+                System.out.println("DEBUG: textViewCurrentBudget is null");
+            }
             updateBudgetUI();
         });
 
         // Observe current month expenses
         expenseViewModel.getCurrentMonthExpenseSum().observe(getViewLifecycleOwner(), sum -> {
-            System.out.println("DEBUG: Expense sum LiveData updated: " + sum);
-            // Call updateBudgetUI to refresh all UI elements
+            double expenseSum = sum != null ? sum : 0.0;
+            System.out.println("DEBUG: Expense sum LiveData updated: " + expenseSum);
+            if (textViewCurrentSpending != null) {
+                textViewCurrentSpending.setText(currencyFormat.format(expenseSum));
+                System.out.println("DEBUG: Updated textViewCurrentSpending");
+            } else {
+                System.out.println("DEBUG: textViewCurrentSpending is null");
+            }
             updateBudgetUI();
         });
         
@@ -95,31 +106,26 @@ public class BudgetFragment extends Fragment {
         
         System.out.println("DEBUG: updateBudgetUI - budget: " + budget + ", expenseSum: " + expenseSum);
         
-        // Set default values if null
-        double budgetValue = budget != null ? budget : 1000.0;
-        double expenseSumValue = expenseSum != null ? expenseSum : 0.0;
-        
-        // Calculate remaining amount
-        double remainingValue = budgetValue - expenseSumValue;
-        
-        // Update UI elements directly
-        if (textViewCurrentBudget != null) {
-            textViewCurrentBudget.setText(currencyFormat.format(budgetValue));
-            System.out.println("DEBUG: Updated textViewCurrentBudget with: " + currencyFormat.format(budgetValue));
+        if (budget != null && expenseSum != null) {
+            System.out.println("DEBUG: updateBudgetUI - calling updateBudgetProgress");
+            updateBudgetProgress(budget, expenseSum);
+        } else {
+            System.out.println("DEBUG: updateBudgetUI - NOT calling updateBudgetProgress because " + 
+                              (budget == null ? "budget is null" : "") + 
+                              (expenseSum == null ? "expenseSum is null" : ""));
+            
+            // Force update with default values if data is missing
+            if (budget == null && expenseSum != null) {
+                System.out.println("DEBUG: updateBudgetUI - forcing update with default budget");
+                updateBudgetProgress(1000.0, expenseSum); // Use default budget
+            } else if (budget != null && expenseSum == null) {
+                System.out.println("DEBUG: updateBudgetUI - forcing update with zero expenses");
+                updateBudgetProgress(budget, 0.0); // Use zero expenses
+            } else if (budget == null && expenseSum == null) {
+                System.out.println("DEBUG: updateBudgetUI - forcing update with default values");
+                updateBudgetProgress(1000.0, 0.0); // Use default values
+            }
         }
-        
-        if (textViewCurrentSpending != null) {
-            textViewCurrentSpending.setText(currencyFormat.format(expenseSumValue));
-            System.out.println("DEBUG: Updated textViewCurrentSpending with: " + currencyFormat.format(expenseSumValue));
-        }
-        
-        if (textViewRemaining != null) {
-            textViewRemaining.setText(currencyFormat.format(remainingValue));
-            System.out.println("DEBUG: Updated textViewRemaining with: " + currencyFormat.format(remainingValue));
-        }
-        
-        // Update progress indicator
-        updateBudgetProgress(budgetValue, expenseSumValue);
     }
 
     /**
@@ -190,7 +196,7 @@ public class BudgetFragment extends Fragment {
     }
     
     /**
-     * Update the budget progress indicator and colors based on current budget and expenses
+     * Update the budget progress indicator and remaining amount with specified expense sum
      * @param budget The current budget amount
      * @param expenseSum The current expense sum
      */
@@ -207,7 +213,15 @@ public class BudgetFragment extends Fragment {
         // Calculate remaining amount (can be negative if exceeded)
         double remaining = budget - spent;
         
-        System.out.println("DEBUG: Updating progress indicator - Budget: " + budget + ", Spent: " + spent + ", Remaining: " + remaining);
+        System.out.println("DEBUG: Updating UI - Budget: " + budget + ", Spent: " + spent + ", Remaining: " + remaining);
+        
+        // Update remaining text with the current value (will show negative if exceeded)
+        if (textViewRemaining != null) {
+            textViewRemaining.setText(currencyFormat.format(remaining));
+            System.out.println("DEBUG: Updated textViewRemaining with: " + currencyFormat.format(remaining));
+        } else {
+            System.out.println("DEBUG: textViewRemaining is null");
+        }
         
         // Calculate progress percentage (avoid division by zero)
         int progress = 0;

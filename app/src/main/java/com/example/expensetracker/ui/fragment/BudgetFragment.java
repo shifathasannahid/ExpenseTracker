@@ -192,6 +192,14 @@ public class BudgetFragment extends Fragment {
             updateBudgetUI();
         });
         
+        // Observe all expenses to ensure we update when expenses are added/modified
+        expenseViewModel.getAllExpenses().observe(getViewLifecycleOwner(), expenses -> {
+            Log.d(TAG, "All expenses LiveData updated with " + (expenses != null ? expenses.size() : 0) + " items");
+            // Force a refresh of the current month expense sum
+            expenseViewModel.getCurrentMonthExpenseSum();
+            updateBudgetUI();
+        });
+        
         // Force initial UI update
         Log.d(TAG, "Forcing initial UI update");
         updateBudgetUI();
@@ -203,7 +211,11 @@ public class BudgetFragment extends Fragment {
     private void updateBudgetUI() {
         Log.d(TAG, "updateBudgetUI called");
         
+        // Get the latest budget value
         Double budget = expenseViewModel.getMonthlyBudget().getValue();
+        
+        // Force a refresh of the expense sum by getting the current month expense sum again
+        // This ensures we have the most up-to-date expense data
         Double expenseSum = expenseViewModel.getCurrentMonthExpenseSum().getValue();
         
         Log.d(TAG, "updateBudgetUI - budget: " + budget + ", expenseSum: " + expenseSum);
@@ -297,6 +309,28 @@ public class BudgetFragment extends Fragment {
         
         // Use the overloaded method with both parameters
         updateBudgetProgress(budget, spent);
+    }
+    
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume: Refreshing budget UI");
+        // Force a refresh of the current month expense sum
+        if (expenseViewModel != null) {
+            expenseViewModel.getCurrentMonthExpenseSum();
+        }
+        updateBudgetUI();
+    }
+    
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.d(TAG, "onActivityCreated: Refreshing budget UI");
+        // Force a refresh of the current month expense sum
+        if (expenseViewModel != null) {
+            expenseViewModel.getCurrentMonthExpenseSum();
+            updateBudgetUI();
+        }
     }
     
     /**

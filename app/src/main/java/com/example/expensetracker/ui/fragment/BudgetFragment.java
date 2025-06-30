@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,7 +19,6 @@ import com.google.android.material.slider.Slider;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-import android.util.Log;
 import java.text.NumberFormat;
 import java.util.Locale;
 
@@ -29,7 +27,6 @@ import java.util.Locale;
  * Allows users to set a budget amount and displays progress towards that budget.
  */
 public class BudgetFragment extends Fragment {
-    private static final String TAG = "BudgetFragment";
 
     private ExpenseViewModel expenseViewModel;
     private TextInputLayout textInputLayoutBudget;
@@ -40,114 +37,6 @@ public class BudgetFragment extends Fragment {
     private TextView textViewRemaining;
     private LinearProgressIndicator progressIndicator;
     private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("bn", "BD"));
-    
-    /**
-     * Safely sets text on a TextView with null check
-     * @param textView The TextView to update
-     * @param text The text to set
-     * @return true if successful, false if textView was null
-     */
-    private boolean safeSetText(TextView textView, String text) {
-        if (textView != null) {
-            textView.setText(text);
-            return true;
-        }
-        return false;
-    }
-    
-    /**
-     * Safely sets color on a View with null check
-     * @param view The View to update
-     * @param color The color to set
-     * @return true if successful, false if view was null
-     */
-    private boolean safeSetColor(View view, int color) {
-        if (view != null) {
-            if (view instanceof TextView) {
-                ((TextView) view).setTextColor(color);
-            } else if (view instanceof LinearProgressIndicator) {
-                ((LinearProgressIndicator) view).setIndicatorColor(color);
-            }
-            view.invalidate();
-            return true;
-        }
-        return false;
-    }
-    
-    /**
-     * Safely sets progress on a progress indicator with null check
-     * @param progressIndicator The progress indicator to update
-     * @param progress The progress value to set (0-100)
-     * @return true if successful, false if progressIndicator was null
-     */
-    private boolean safeSetProgress(LinearProgressIndicator progressIndicator, int progress) {
-        if (progressIndicator != null) {
-            // Ensure progress is between 0 and 100
-            int cappedProgress = Math.min(Math.max(progress, 0), 100);
-            progressIndicator.setProgress(cappedProgress);
-            safeRequestLayout(progressIndicator);
-            return true;
-        }
-        return false;
-    }
-    
-    /**
-     * Safely requests layout update on a view with null check
-     * @param view The view to update layout for
-     * @return true if successful, false if view was null
-     */
-    private boolean safeRequestLayout(View view) {
-        if (view != null) {
-            view.requestLayout();
-            view.invalidate();
-            return true;
-        }
-        return false;
-    }
-    
-    /**
-     * Verifies that the budget calculation logic is correct (budget - spent = remaining)
-     * @param budget The budget amount
-     * @param spent The amount spent
-     * @param remaining The calculated remaining amount
-     */
-    private void verifyBudgetCalculation(double budget, double spent, double remaining) {
-        // Due to floating point precision, we'll use a small epsilon for comparison
-        double epsilon = 0.001;
-        double calculatedRemaining = budget - spent;
-        
-        if (Math.abs(calculatedRemaining - remaining) > epsilon) {
-            Log.e(TAG, "Budget calculation error: budget(" + budget + ") - spent(" + spent + ") = " + 
-                  calculatedRemaining + ", but remaining = " + remaining);
-        } else {
-            Log.d(TAG, "Budget calculation verified: " + budget + " - " + spent + " = " + remaining);
-        }
-    }
-    
-    /**
-     * Formats a double value as currency using the current locale
-     * @param value The value to format
-     * @return The formatted currency string
-     */
-    private String formatCurrency(double value) {
-        // Use the existing currencyFormat which is already initialized as final
-        return currencyFormat.format(value);
-    }
-    
-    /**
-     * Safely shows a toast message with null check for context
-     * @param message The message to show
-     * @param duration The toast duration (Toast.LENGTH_SHORT or Toast.LENGTH_LONG)
-     * @return true if successful, false if context was null
-     */
-    private boolean safeShowToast(String message, int duration) {
-        if (getContext() != null) {
-            Toast.makeText(getContext(), message, duration).show();
-            return true;
-        }
-        Log.d(TAG, "Cannot show toast: " + message + " (context is null)");
-        return false;
-    }
 
     @Nullable
     @Override
@@ -174,34 +63,24 @@ public class BudgetFragment extends Fragment {
         // Set up budget save button
         buttonSaveBudget.setOnClickListener(v -> saveBudget());
 
-        Log.d(TAG, "Setting up LiveData observers");
+        System.out.println("DEBUG: Setting up LiveData observers");
         
         // Observe budget changes
         expenseViewModel.getMonthlyBudget().observe(getViewLifecycleOwner(), budget -> {
-            Log.d(TAG, "Budget LiveData updated: " + budget);
-            // Don't update the UI directly here, let updateBudgetUI handle it
-            // This ensures consistent calculation across all updates
+            System.out.println("DEBUG: Budget LiveData updated: " + budget);
+            // Call updateBudgetUI to refresh all UI elements
             updateBudgetUI();
         });
 
         // Observe current month expenses
         expenseViewModel.getCurrentMonthExpenseSum().observe(getViewLifecycleOwner(), sum -> {
-            Log.d(TAG, "Expense sum LiveData updated: " + sum);
-            // Don't update the UI directly here, let updateBudgetUI handle it
-            // This ensures consistent calculation across all updates
-            updateBudgetUI();
-        });
-        
-        // Observe all expenses to ensure we update when expenses are added/modified
-        expenseViewModel.getAllExpenses().observe(getViewLifecycleOwner(), expenses -> {
-            Log.d(TAG, "All expenses LiveData updated with " + (expenses != null ? expenses.size() : 0) + " items");
-            // Force a refresh of the current month expense sum
-            expenseViewModel.getCurrentMonthExpenseSum();
+            System.out.println("DEBUG: Expense sum LiveData updated: " + sum);
+            // Call updateBudgetUI to refresh all UI elements
             updateBudgetUI();
         });
         
         // Force initial UI update
-        Log.d(TAG, "Forcing initial UI update");
+        System.out.println("DEBUG: Forcing initial UI update");
         updateBudgetUI();
     }
     
@@ -209,29 +88,38 @@ public class BudgetFragment extends Fragment {
      * Update the budget UI with the latest data
      */
     private void updateBudgetUI() {
-        Log.d(TAG, "updateBudgetUI called");
+        System.out.println("DEBUG: updateBudgetUI called");
         
-        // Get the latest budget value
         Double budget = expenseViewModel.getMonthlyBudget().getValue();
-        
-        // Force a refresh of the expense sum by getting the current month expense sum again
-        // This ensures we have the most up-to-date expense data
         Double expenseSum = expenseViewModel.getCurrentMonthExpenseSum().getValue();
         
-        Log.d(TAG, "updateBudgetUI - budget: " + budget + ", expenseSum: " + expenseSum);
+        System.out.println("DEBUG: updateBudgetUI - budget: " + budget + ", expenseSum: " + expenseSum);
         
-        // Ensure we have valid values to work with
-        double validBudget = (budget != null && budget > 0) ? budget : 1000.0;
-        double validExpenseSum = (expenseSum != null) ? expenseSum : 0.0;
+        // Set default values if null
+        double budgetValue = budget != null ? budget : 1000.0;
+        double expenseSumValue = expenseSum != null ? expenseSum : 0.0;
         
-        Log.d(TAG, "updateBudgetUI - using validBudget: " + validBudget + ", validExpenseSum: " + validExpenseSum);
+        // Calculate remaining amount
+        double remainingValue = budgetValue - expenseSumValue;
         
-        // Always update the UI with the best available values
-        updateBudgetProgress(validBudget, validExpenseSum);
+        // Update UI elements directly
+        if (textViewCurrentBudget != null) {
+            textViewCurrentBudget.setText(currencyFormat.format(budgetValue));
+            System.out.println("DEBUG: Updated textViewCurrentBudget with: " + currencyFormat.format(budgetValue));
+        }
         
-        // Log the calculation for debugging
-        double remaining = validBudget - validExpenseSum;
-        Log.d(TAG, "Budget calculation: " + validBudget + " - " + validExpenseSum + " = " + remaining);
+        if (textViewCurrentSpending != null) {
+            textViewCurrentSpending.setText(currencyFormat.format(expenseSumValue));
+            System.out.println("DEBUG: Updated textViewCurrentSpending with: " + currencyFormat.format(expenseSumValue));
+        }
+        
+        if (textViewRemaining != null) {
+            textViewRemaining.setText(currencyFormat.format(remainingValue));
+            System.out.println("DEBUG: Updated textViewRemaining with: " + currencyFormat.format(remainingValue));
+        }
+        
+        // Update progress indicator
+        updateBudgetProgress(budgetValue, expenseSumValue);
     }
 
     /**
@@ -239,50 +127,46 @@ public class BudgetFragment extends Fragment {
      * Sets the new budget amount directly (not adding to existing budget)
      */
     private void saveBudget() {
-        Log.d(TAG, "saveBudget method called");
+        System.out.println("DEBUG: saveBudget method called");
         String budgetStr = editTextBudget.getText() != null ? editTextBudget.getText().toString() : "";
-        Log.d(TAG, "Budget input string: '" + budgetStr + "'");
+        System.out.println("DEBUG: Budget input string: '" + budgetStr + "'");
         
         if (budgetStr.isEmpty()) {
-            Log.d(TAG, "Budget string is empty");
+            System.out.println("DEBUG: Budget string is empty");
             textInputLayoutBudget.setError(getString(R.string.error_empty_budget));
             return;
         }
         
         try {
             double newBudgetAmount = Double.parseDouble(budgetStr);
-            Log.d(TAG, "Parsed budget amount: " + newBudgetAmount);
+            System.out.println("DEBUG: Parsed budget amount: " + newBudgetAmount);
             
             if (newBudgetAmount <= 0) {
-                Log.d(TAG, "Budget amount is negative or zero");
+                System.out.println("DEBUG: Budget amount is negative or zero");
                 textInputLayoutBudget.setError(getString(R.string.error_negative_budget));
                 return;
             }
             
             // Set the new budget amount directly (not adding to existing budget)
-            Log.d(TAG, "Setting new budget amount in ViewModel: " + newBudgetAmount);
+            System.out.println("DEBUG: Setting new budget amount in ViewModel: " + newBudgetAmount);
             expenseViewModel.setMonthlyBudget(newBudgetAmount);
             textInputLayoutBudget.setError(null);
             editTextBudget.setText("");
             
-            // The LiveData observer will trigger updateBudgetUI automatically
-            // No need to manually call updateBudgetProgress or updateBudgetUI here
+            // Update the budget progress with the new budget value
+            System.out.println("DEBUG: Calling updateBudgetProgress with new budget");
+            updateBudgetProgress(newBudgetAmount);
             
-            Log.d(TAG, "Budget saved successfully: " + newBudgetAmount);
-            
-            // Show a toast with the saved budget
-            String message = "Budget set to " + formatCurrency(newBudgetAmount);
-            safeShowToast(message, Toast.LENGTH_SHORT);
-            
-            // For extra safety, force a UI update after a short delay
+            // Force UI refresh
+            System.out.println("DEBUG: Forcing UI refresh after budget save");
             if (getView() != null) {
-                getView().postDelayed(() -> {
-                    Log.d(TAG, "Performing delayed UI update after budget save");
+                getView().post(() -> {
                     updateBudgetUI();
-                }, 100); // Short delay to ensure LiveData has propagated
+                    System.out.println("DEBUG: Post-save UI update complete");
+                });
             }
         } catch (NumberFormatException e) {
-            Log.d(TAG, "Number format exception: " + e.getMessage());
+            System.out.println("DEBUG: Number format exception: " + e.getMessage());
             textInputLayoutBudget.setError(getString(R.string.error_invalid_number));
         }
     }
@@ -293,7 +177,7 @@ public class BudgetFragment extends Fragment {
      */
     private void updateBudgetProgress(Double budget) {
         if (budget == null || budget <= 0) {
-            Log.d(TAG, "Invalid budget value: " + budget);
+            System.out.println("DEBUG: Invalid budget value: " + budget);
             return;
         }
         
@@ -301,150 +185,110 @@ public class BudgetFragment extends Fragment {
         Double expenseSum = expenseViewModel.getCurrentMonthExpenseSum().getValue();
         double spent = expenseSum != null ? expenseSum : 0.0;
         
-        Log.d(TAG, "updateBudgetProgress(budget) - budget: " + budget + ", spent: " + spent);
-        
-        // Calculate remaining for logging
-        double remaining = budget - spent;
-        Log.d(TAG, "Budget calculation: " + budget + " - " + spent + " = " + remaining);
-        
         // Use the overloaded method with both parameters
         updateBudgetProgress(budget, spent);
     }
     
-    @Override
-    public void onResume() {
-        super.onResume();
-        Log.d(TAG, "onResume: Refreshing budget UI");
-        // Force a refresh of the current month expense sum
-        if (expenseViewModel != null) {
-            expenseViewModel.getCurrentMonthExpenseSum();
-        }
-        updateBudgetUI();
-    }
-    
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        Log.d(TAG, "onActivityCreated: Refreshing budget UI");
-        // Force a refresh of the current month expense sum
-        if (expenseViewModel != null) {
-            expenseViewModel.getCurrentMonthExpenseSum();
-            updateBudgetUI();
-        }
-    }
-    
     /**
-     * Update the budget progress indicator and remaining amount with specified budget and expense sum
-     * This is the main method that handles all UI updates related to budget display
-     * 
+     * Update the budget progress indicator and colors based on current budget and expenses
      * @param budget The current budget amount
      * @param expenseSum The current expense sum
      */
     private void updateBudgetProgress(Double budget, Double expenseSum) {
-        Log.d(TAG, "updateBudgetProgress(budget, expenseSum) called with budget: " + budget + ", expenseSum: " + expenseSum);
+        System.out.println("DEBUG: updateBudgetProgress(budget, expenseSum) called with budget: " + budget + ", expenseSum: " + expenseSum);
         
         if (budget == null || budget <= 0) {
-            Log.d(TAG, "Invalid budget value: " + budget);
+            System.out.println("DEBUG: Invalid budget value: " + budget);
             return;
         }
         
         double spent = expenseSum != null ? expenseSum : 0.0;
         
-        // Calculate remaining amount (can be negative if over budget)
+        // Calculate remaining amount (can be negative if exceeded)
         double remaining = budget - spent;
         
-        // Verify budget calculation logic
-        verifyBudgetCalculation(budget, spent, remaining);
-        Log.d(TAG, "Updating UI - Budget: " + budget + ", Spent: " + spent + ", Remaining: " + remaining);
-        
-        // Update budget and spending text views first
-        String formattedBudget = formatCurrency(budget);
-        String formattedSpent = formatCurrency(spent);
-        String formattedRemaining = formatCurrency(remaining);
-        
-        if (safeSetText(textViewCurrentBudget, formattedBudget)) {
-            Log.d(TAG, "Updated textViewCurrentBudget with: " + formattedBudget);
-        }
-        
-        if (safeSetText(textViewCurrentSpending, formattedSpent)) {
-            Log.d(TAG, "Updated textViewCurrentSpending with: " + formattedSpent);
-        }
-        
-        // Update remaining text with the current value (will show negative if exceeded)
-        if (safeSetText(textViewRemaining, formattedRemaining)) {
-            Log.d(TAG, "Updated textViewRemaining with: " + formattedRemaining);
-        } else {
-            Log.d(TAG, "textViewRemaining is null");
-        }
+        System.out.println("DEBUG: Updating progress indicator - Budget: " + budget + ", Spent: " + spent + ", Remaining: " + remaining);
         
         // Calculate progress percentage (avoid division by zero)
         int progress = 0;
         if (budget > 0) {
             progress = (int) ((spent / budget) * 100);
-            Log.d(TAG, "Progress calculated: " + progress + "%");
+            System.out.println("DEBUG: Progress calculated: " + progress + "%");
         }
         
-        // Progress will be capped at 100% in safeSetProgress method
-        if (safeSetProgress(progressIndicator, progress)) {
-            Log.d(TAG, "Set progress indicator to: " + Math.min(progress, 100) + "%");
+        // Ensure progress doesn't exceed 100% for visual purposes only
+        if (progressIndicator != null) {
+            int cappedProgress = Math.min(progress, 100);
+            progressIndicator.setProgress(cappedProgress);
+            System.out.println("DEBUG: Set progress indicator to " + cappedProgress + "%");
         } else {
-            Log.d(TAG, "progressIndicator is null");
+            System.out.println("DEBUG: progressIndicator is null");
         }
         
         // Change color based on progress
         int colorResId;
         if (progress >= 100) {
             colorResId = R.color.budget_exceeded;
-            Log.d(TAG, "Using budget_exceeded color");
+            System.out.println("DEBUG: Using budget_exceeded color");
         } else if (progress >= 80) {
             colorResId = R.color.budget_warning;
-            Log.d(TAG, "Using budget_warning color");
+            System.out.println("DEBUG: Using budget_warning color");
         } else {
             colorResId = R.color.budget_good;
-            Log.d(TAG, "Using budget_good color");
+            System.out.println("DEBUG: Using budget_good color");
         }
         
         // Apply colors to UI components
         if (getContext() != null) {
             try {
                 int color = getResources().getColor(colorResId, null);
-                Log.d(TAG, "Color resource resolved");
+                System.out.println("DEBUG: Color resource resolved");
                 
-                if (safeSetColor(progressIndicator, color)) {
-                    Log.d(TAG, "Applied color to progressIndicator");
+                if (progressIndicator != null) {
+                    progressIndicator.setIndicatorColor(color);
+                    progressIndicator.invalidate();
+                    System.out.println("DEBUG: Applied color to progressIndicator");
                 }
                 
-                if (safeSetColor(textViewRemaining, color)) {
-                    Log.d(TAG, "Applied color to textViewRemaining");
+                if (textViewRemaining != null) {
+                    textViewRemaining.setTextColor(color);
+                    textViewRemaining.invalidate();
+                    System.out.println("DEBUG: Applied color to textViewRemaining");
                 }
             } catch (Exception e) {
-                Log.d(TAG, "Error applying colors: " + e.getMessage());
+                System.out.println("DEBUG: Error applying colors: " + e.getMessage());
             }
         } else {
-            Log.d(TAG, "Context is null");
+            System.out.println("DEBUG: Context is null");
         }
         
         // Force layout updates to ensure UI reflects current state
-        if (safeRequestLayout(progressIndicator)) {
-            Log.d(TAG, "Requested layout for progressIndicator");
+        if (progressIndicator != null) {
+            progressIndicator.requestLayout();
+            System.out.println("DEBUG: Requested layout for progressIndicator");
         }
         
-        if (safeRequestLayout(textViewRemaining)) {
-            Log.d(TAG, "Requested layout for textViewRemaining");
+        if (textViewRemaining != null) {
+            textViewRemaining.requestLayout();
+            System.out.println("DEBUG: Requested layout for textViewRemaining");
         }
         
         // Force parent view to redraw
         View rootView = getView();
-        if (safeRequestLayout(rootView)) {
-            Log.d(TAG, "Invalidated and requested layout for root view");
-            
-            // Schedule a post-layout update
+        if (rootView != null) {
+            rootView.invalidate();
+            rootView.requestLayout();
+            System.out.println("DEBUG: Invalidated and requested layout for root view");
+        } else {
+            System.out.println("DEBUG: Root view is null");
+        }
+        
+        // Force immediate layout pass
+        if (rootView != null) {
             rootView.post(() -> {
-                Log.d(TAG, "Performing post-layout update");
+                System.out.println("DEBUG: Performing post-layout update");
                 rootView.invalidate();
             });
-        } else {
-            Log.d(TAG, "Root view is null");
         }
     }
 }

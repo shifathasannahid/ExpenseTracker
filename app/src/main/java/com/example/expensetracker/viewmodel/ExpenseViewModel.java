@@ -97,17 +97,24 @@ public class ExpenseViewModel extends AndroidViewModel {
     }
     
     /**
-     * Get the sum of expenses for the current month
-     * @return LiveData containing the sum of expenses for the current month
+     * Get monthly expense sum for the current month
+     * @return LiveData containing the sum
      */
     public LiveData<Double> getCurrentMonthExpenseSum() {
+        System.out.println("DEBUG: ExpenseViewModel.getCurrentMonthExpenseSum called");
+        
         int year = currentYear.getValue() != null ? currentYear.getValue() : Calendar.getInstance().get(Calendar.YEAR);
         int month = currentMonth.getValue() != null ? currentMonth.getValue() : Calendar.getInstance().get(Calendar.MONTH) + 1;
         
-        System.out.println("DEBUG: ExpenseViewModel.getCurrentMonthExpenseSum - Getting expense sum for " + year + "-" + month);
+        System.out.println("DEBUG: Getting expense sum for year: " + year + ", month: " + month);
+        LiveData<Double> result = repository.getMonthlyExpenseSum(year, month);
         
-        // This will trigger a refresh of the expense sum LiveData
-        return repository.getMonthlyExpenseSum(year, month);
+        // Add an observer to log the value when it changes
+        result.observeForever(sum -> {
+            System.out.println("DEBUG: Expense sum LiveData updated with value: " + sum);
+        });
+        
+        return result;
     }
     
     /**
@@ -144,10 +151,7 @@ public class ExpenseViewModel extends AndroidViewModel {
      * @return ID of the inserted expense
      */
     public long insert(Expense expense) {
-        long id = repository.insert(expense);
-        // Force a refresh of the current month expense sum
-        refreshCurrentMonthExpenseSum();
-        return id;
+        return repository.insert(expense);
     }
     
     /**
@@ -156,8 +160,6 @@ public class ExpenseViewModel extends AndroidViewModel {
      */
     public void update(Expense expense) {
         repository.update(expense);
-        // Force a refresh of the current month expense sum
-        refreshCurrentMonthExpenseSum();
     }
     
     /**
@@ -166,21 +168,6 @@ public class ExpenseViewModel extends AndroidViewModel {
      */
     public void delete(Expense expense) {
         repository.delete(expense);
-        // Force a refresh of the current month expense sum
-        refreshCurrentMonthExpenseSum();
-    }
-    
-    /**
-     * Force a refresh of the current month expense sum
-     * This is useful when expenses are added, updated, or deleted
-     */
-    private void refreshCurrentMonthExpenseSum() {
-        System.out.println("DEBUG: ExpenseViewModel.refreshCurrentMonthExpenseSum called");
-        int year = currentYear.getValue() != null ? currentYear.getValue() : Calendar.getInstance().get(Calendar.YEAR);
-        int month = currentMonth.getValue() != null ? currentMonth.getValue() : Calendar.getInstance().get(Calendar.MONTH) + 1;
-        
-        // This will trigger a refresh of the expense sum LiveData
-        repository.getMonthlyExpenseSum(year, month);
     }
     
     /**

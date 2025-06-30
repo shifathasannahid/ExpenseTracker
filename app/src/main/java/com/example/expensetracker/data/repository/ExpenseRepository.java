@@ -73,16 +73,15 @@ public class ExpenseRepository {
      * Get the sum of expenses for a specific month
      * @param year Year
      * @param month Month (1-12)
-     * @return LiveData containing the sum of expenses for the specified month
+     * @return LiveData containing the sum
      */
     public LiveData<Double> getMonthlyExpenseSum(int year, int month) {
+        System.out.println("DEBUG: ExpenseRepository.getMonthlyExpenseSum called for year: " + year + ", month: " + month);
         Date[] dates = getMonthStartAndEndDates(year, month);
-        System.out.println("DEBUG: ExpenseRepository.getMonthlyExpenseSum - Getting expense sum for " + 
-                          year + "-" + month + " (" + dates[0] + " to " + dates[1] + ")");
+        System.out.println("DEBUG: Date range for expense sum: " + dates[0] + " to " + dates[1]);
         
-        // Get the expense sum from the DAO
         LiveData<Double> result = expenseDao.getMonthlyExpenseSum(dates[0], dates[1]);
-        
+        System.out.println("DEBUG: Returning LiveData for monthly expense sum");
         return result;
     }
     
@@ -109,9 +108,7 @@ public class ExpenseRepository {
      */
     public long insert(Expense expense) {
         try {
-            long id = new InsertExpenseAsyncTask(expenseDao).execute(expense).get();
-            System.out.println("DEBUG: ExpenseRepository.insert - Expense inserted with ID: " + id);
-            return id;
+            return new InsertExpenseAsyncTask(expenseDao).execute(expense).get();
         } catch (Exception e) {
             e.printStackTrace();
             return -1; // Return -1 to indicate error
@@ -123,7 +120,6 @@ public class ExpenseRepository {
      * @param expense Expense to update
      */
     public void update(Expense expense) {
-        System.out.println("DEBUG: ExpenseRepository.update - Updating expense with ID: " + expense.getId());
         new UpdateExpenseAsyncTask(expenseDao).execute(expense);
     }
     
@@ -132,7 +128,6 @@ public class ExpenseRepository {
      * @param expense Expense to delete
      */
     public void delete(Expense expense) {
-        System.out.println("DEBUG: ExpenseRepository.delete - Deleting expense with ID: " + expense.getId());
         new DeleteExpenseAsyncTask(expenseDao).execute(expense);
     }
     

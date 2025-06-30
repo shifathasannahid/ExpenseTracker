@@ -130,9 +130,7 @@ public class BudgetFragment extends Fragment {
      * @return The formatted currency string
      */
     private String formatCurrency(double value) {
-        if (currencyFormat == null) {
-            currencyFormat = NumberFormat.getCurrencyInstance(Locale.getDefault());
-        }
+        // Use the existing currencyFormat which is already initialized as final
         return currencyFormat.format(value);
     }
     
